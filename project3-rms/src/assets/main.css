@@ -1,0 +1,76 @@
+/* . is for className, # is for id */
+
+.mainPage {
+  text-align: center;
+  margin-top: 0%;
+  border: none;
+  border-radius: 20px;
+}
+
+.registerDiv {
+  background-color: #f8f9fa;
+  padding: 40px;
+  margin-top: 10%;
+  margin-left: 12.5%;
+  max-width: 75%;
+  border-radius: 20px;
+}
+
+.loginDiv {
+  background-color: #f8f9fa;
+  padding: 40px;
+  margin-top: 10%;
+  margin-left: 12.5%;
+  max-width: 75%;
+  border-radius: 20px;
+}
+
+body {
+  font-family: 'Muli', ;
+  /* background-color: lightgrey;
+  background-image: url("https://mms.businesswire.com/media/20191114005468/en/756709/23/Revature-Logo-%28002%29.jpg");
+  background-size: auto;
+  background-size: cover; */
+}
+
+.header {
+  height: 12%;
+  background-color: #f26900;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  text-align:right
+}
+
+#headerImage {
+  width: 15%;
+  height: auto;
+  opacity: 85%;
+}
+
+.footer {
+  height: 15%;
+  background-color: #494d56;
+  width: 100%;
+  bottom: 0px;
+  position: absolute;
+  color: white;
+}
+
+.enterButton {
+  position: absolute;
+  top: 70%;
+  left: 46%;
+}
+
+#footerText {
+  /* position: relative;
+  align-content: center; */
+  top: 0px;
+}
+
+.dropdown-menu-right {
+  right: 0;
+  left: auto;
+}
