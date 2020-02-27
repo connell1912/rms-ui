@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import IBatch from "../../model/IBatch";
+import IBatch, { curriculumEnum } from "../../model/IBatch";
 import { Form, FormGroup, Input, Col } from "reactstrap";
 import { addBatch } from "../../../utility/api";
 
@@ -10,12 +10,12 @@ interface IBatchProps {
 
 export const CreateComponent: React.FC<any> = (props: IBatchProps) => {
   const [batchName, setBatchName] = useState("");
-  const [startDate, setStartDate] = useState();
-  const [endDate, setEndDate] = useState();
+  const [startDate, setStartDate] = useState(new Date());
+  const [endDate, setEndDate] = useState(new Date());
 //   const [trainerId, setTrainerId] = useState();
 //   const [coTrainerId, setCoTrainerId] = useState();
-  const [associates, setAssociates] = useState();
-  const [curriculum, setCurriculum] = useState();
+  const [associates, setAssociates] = useState([]);
+  const [curriculum, setCurriculum] = useState(curriculumEnum.PEGA);
 
   return (
     <>
@@ -30,7 +30,7 @@ export const CreateComponent: React.FC<any> = (props: IBatchProps) => {
               endDate: endDate,
               trainerId: 0,
               coTrainerId: 0,
-              associates: associates,
+              associates: [],
               curriculum: curriculum
             }).then(r => console.log(r.data))
           }
@@ -54,8 +54,9 @@ export const CreateComponent: React.FC<any> = (props: IBatchProps) => {
                 type="date"
                 name="startDate"
                 id="startDate"
+                
                 placeholder="Start Date for Batch"
-                onChange={val => setStartDate(val.target.value)}
+                onChange={val => setStartDate(new Date(val.target.value))}
               />
             </Col>
           </FormGroup>
@@ -67,7 +68,7 @@ export const CreateComponent: React.FC<any> = (props: IBatchProps) => {
                 name="endDate"
                 id="endDate"
                 placeholder="Projected End Date for Batch"
-                onChange={val => setEndDate(val.target.value)}
+                onChange={val => setEndDate(new Date(val.target.value))}
               />
             </Col>
           </FormGroup>

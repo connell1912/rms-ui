@@ -1,4 +1,4 @@
-export enum curriculum {
+export enum curriculumEnum {
     JAVA_MSA,
     CSHARP,
     PEGA,
@@ -16,6 +16,6 @@ export default interface IBatch {
     trainerId?: number,
     coTrainerId?: number,
     associates?: [],
-    curriculum?: curriculum,
+    curriculum?: curriculumEnum,
     resourceMetaData?: any
 }

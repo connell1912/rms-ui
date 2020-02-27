@@ -1,4 +1,4 @@
-export enum roles {
+export enum rolesEnum {
     TRNG_MNGR,
     BLDG_MNGR,
     TRAINER,
@@ -31,6 +31,6 @@ export default interface IUser {
     title?: titles,
     password: string,
     employeeId?: number,
-    roles?: roles
+    roles?: rolesEnum,
     department?: departments
 }

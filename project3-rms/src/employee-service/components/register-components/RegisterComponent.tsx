@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Form, FormGroup, Label, Col, Input, Button } from "reactstrap";
 import { addUser } from "../../../utility/api";
-import IUser from "../../model/IUser";
+import IUser, { rolesEnum } from "../../model/IUser";
 
 interface IRegisterProps {
   addUser: (body: IUser) => void;
@@ -13,7 +13,7 @@ export const RegisterComponent: React.FC<any> = (props: IRegisterProps) => {
   const [password, setPassword] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
-  const [roles, setRoles] = useState();
+  const [roles, setRoles] = useState(rolesEnum.ADMIN);
 
   return (
     <>
@@ -104,15 +104,15 @@ export const RegisterComponent: React.FC<any> = (props: IRegisterProps) => {
                 type="select"
                 name="select"
                 id="exampleSelect"
-                onChange={val => setRoles(val.target.value)}
+                onChange={val => setRoles(val.target.valueAsNumber)}
               >
                 <option selected disabled>
                   Select a Role
                 </option>
-                <option>Training Manager</option>
-                <option>Building Manager</option>
-                <option>Trainer</option>
-                <option>Admin</option>
+                <option value={0}>Training Manager</option>
+                <option value={1}>Building Manager</option>
+                <option value={2}>Trainer</option>
+                <option value={3}>Admin</option>
               </Input>
             </Col>
           </FormGroup>
