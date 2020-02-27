@@ -1,5 +1,6 @@
 import axiosConfig from "./axiosConfig";
-import IUser from "../model/IUser";
+import IUser from "../employee-service/model/IUser";
+import IBatch from "../batch-service/model/IBatch";
 
 export const apiLogin = async (username: string, password: string) => {
   try {
@@ -66,3 +67,7 @@ export const addUser = async (body: IUser) => {
     };
   }
 };
+
+export const addBatch = (body: IBatch) => {
+  return axiosConfig.post('newbatch.app', body);
+}

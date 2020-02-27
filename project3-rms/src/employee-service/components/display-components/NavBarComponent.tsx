@@ -10,7 +10,7 @@ export const NavBarComponent = (props:any) => {
   return (
     <div>
       <Navbar color="" light expand="md" style={{ backgroundColor: "#f26900" }}>
-        <NavbarBrand href="/">Room Management System</NavbarBrand>
+        <NavbarBrand href="/">Resource Management System</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>

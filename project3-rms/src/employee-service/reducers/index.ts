@@ -19,5 +19,7 @@ export interface IState {
 
 export const state = combineReducers<IState>({
   userState: loginReducer,
-  registerState: registerReducer
+  registerState: registerReducer,
 });
+
+

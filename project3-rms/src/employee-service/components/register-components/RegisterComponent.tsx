@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Form, FormGroup, Label, Col, Input, Button } from "reactstrap";
-import { addUser } from "../../utility/api";
+import { addUser } from "../../../utility/api";
 import IUser from "../../model/IUser";
 
 interface IRegisterProps {

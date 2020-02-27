@@ -1,5 +1,5 @@
-import { apiLogin } from "../utility/api";
-import { history } from "../utility/history";
+import { apiLogin } from "../../utility/api";
+import { history } from "../../utility/history";
 
 export const loginTypes = {
   SUCCESSFUL_LOGIN: "LOGIN_SUCCESSFUL_LOGIN",

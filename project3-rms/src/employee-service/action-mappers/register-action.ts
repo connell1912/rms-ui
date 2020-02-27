@@ -1,5 +1,5 @@
 import IUser from "../model/IUser";
-import { addUser } from "../utility/api";
+import { addUser } from "../../utility/api";
 
 export const registerTypes = {
   SUCCESSFUL_REGISTER: "REGISTER_SUCCESSFUL_REGISTER",

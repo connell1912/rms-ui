@@ -6,9 +6,9 @@ import { Provider } from "react-redux";
 import { store } from "./Store";
 import { history } from "./utility/history";
 import { Router, Switch, Route } from "react-router";
-import LoginComponent from "./components/login-components/LoginContainer";
-import RegisterComponent from "./components/register-components/RegisterContainer";
-import { NavBarComponent } from "./components/display-components/NavBarComponent";
+import LoginComponent from "./employee-service/components/login-components/LoginContainer";
+import RegisterComponent from "./employee-service/components/register-components/RegisterContainer";
+import { NavBarComponent } from "./employee-service/components/display-components/NavBarComponent";
 
 function App() {
   return (

@@ -2,7 +2,7 @@ export enum roles {
     TRNG_MNGR,
     BLDG_MNGR,
     TRAINER,
-    LOCKED
+    ADMIN
 }
 
 export enum departments {
