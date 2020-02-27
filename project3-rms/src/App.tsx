@@ -1,5 +1,5 @@
 import React from "react";
-import HeaderImage from "./assets/Revature.png";
+import HeaderImage from "./assets/Revature_on_orange.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./assets/main.css";
 import { Provider } from "react-redux";
@@ -8,8 +8,8 @@ import { history } from "./utility/history";
 import { Router, Switch, Route } from "react-router";
 import LoginComponent from "./employee-service/components/login-components/LoginContainer";
 import RegisterComponent from "./employee-service/components/register-components/RegisterContainer";
-import { NavBarComponent } from "./employee-service/components/display-components/NavBarComponent";
 import CreateComponent from "./batch-service/components/create-components/CreateContainer";
+import { NavBarComponent } from "./assets/display-components/NavBarComponent";
 
 function App() {
   return (

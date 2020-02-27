@@ -1,9 +1,20 @@
-import React, { useState } from 'react';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
-import { updateCurrentUser } from '../../action-mappers/login-action';
+import React, { useState } from "react";
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem
+} from "reactstrap";
 
-export const NavBarComponent = (props:any) => {
-    const [isOpen, setIsOpen] = useState(false);
+export const NavBarComponent = (props: any) => {
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
 
@@ -23,12 +34,12 @@ export const NavBarComponent = (props:any) => {
             <NavItem>
               <NavLink href="/register">Register</NavLink>
             </NavItem>
-            <UncontrolledDropdown  nav inNavbar>
+            <UncontrolledDropdown nav inNavbar>
               <DropdownToggle className="dropdown-menu-right" nav caret>
-                {updateCurrentUser}
+                {/* {updateCurrentUser} */}
               </DropdownToggle>
-              <DropdownMenu right >
-                <DropdownItem>Settings</DropdownItem>
+              <DropdownMenu right>
+                <DropdownItem href="/createbatch">New Batch</DropdownItem>
                 <DropdownItem>Logout</DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
@@ -37,6 +48,6 @@ export const NavBarComponent = (props:any) => {
       </Navbar>
     </div>
   );
-}
+};
 
 export default NavBarComponent;

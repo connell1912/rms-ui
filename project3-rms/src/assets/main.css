@@ -25,6 +25,15 @@
   border-radius: 20px;
 }
 
+.createBatchDiv {
+  background-color: #f8f9fa;
+  padding: 40px;
+  margin-top: 10%;
+  margin-left: 12.5%;
+  max-width: 75%;
+  border-radius: 20px;
+}
+
 body {
   font-family: 'Muli', ;
   /* background-color: lightgrey;
@@ -34,7 +43,7 @@ body {
 }
 
 .header {
-  height: 12%;
+  height: 13%;
   background-color: #f26900;
   width: 100%;
   left: 0px;
@@ -46,7 +55,9 @@ body {
 #headerImage {
   width: 15%;
   height: auto;
-  opacity: 85%;
+  /* opacity: 85%; */
+  padding-right: 10px;
+  padding-top: 10px;
 }
 
 .footer {

@@ -5,7 +5,7 @@ export enum rolesEnum {
     ADMIN
 }
 
-export enum departments {
+export enum departmentsEnum {
     TRAINING,
     STAGING,
     QC,
@@ -13,7 +13,7 @@ export enum departments {
     HR
 }
 
-export enum titles {
+export enum titlesEnum {
     TRAINER,
     COTRAINER,
     TRNG_MNGR,
@@ -28,9 +28,9 @@ export default interface IUser {
     firstName: string,
     lastName: string,
     email: string,
-    title?: titles,
+    title?: titlesEnum,
     password: string,
     employeeId?: number,
     roles?: rolesEnum,
-    department?: departments
+    department?: departmentsEnum
 }

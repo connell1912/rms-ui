@@ -4,7 +4,7 @@ import IBatch from "../batch-service/model/IBatch";
 
 export const apiLogin = async (username: string, password: string) => {
   try {
-    const response = await axiosConfig.post("auth.app", {
+    const response = await axiosConfig.post("auth", {
       username,
       password
     });
@@ -38,7 +38,7 @@ export const apiLogin = async (username: string, password: string) => {
 
 export const addUser = async (body: IUser) => {
   try {
-    const response = await axiosConfig.post("addUser.app", {
+    const response = await axiosConfig.post("addUser", {
       body
     });
     if (response.status === 200) {
@@ -69,5 +69,5 @@ export const addUser = async (body: IUser) => {
 };
 
 export const addBatch = async (body: IBatch) => {
-  return await axiosConfig.post('newbatch.app', body);
+  return await axiosConfig.post('addbatch', body);
 }
