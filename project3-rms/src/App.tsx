@@ -9,6 +9,7 @@ import { Router, Switch, Route } from "react-router";
 import LoginComponent from "./employee-service/components/login-components/LoginContainer";
 import RegisterComponent from "./employee-service/components/register-components/RegisterContainer";
 import { NavBarComponent } from "./employee-service/components/display-components/NavBarComponent";
+import CreateComponent from "./batch-service/components/create-components/CreateContainer";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             </div>
             <Switch>
               <Route path="/register" component={RegisterComponent} />
+              <Route path="/createbatch" component={CreateComponent}/>
               <Route path="/" component={LoginComponent} />
             </Switch>
           </Router>

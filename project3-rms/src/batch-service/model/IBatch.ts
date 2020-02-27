@@ -9,13 +9,13 @@ export enum curriculum {
 }
 
 export default interface IBatch {
-    batchId: number,
+    batchId?: number,
     batchName: string,
     startDate: Date,
     endDate: Date,
     trainerId?: number,
     coTrainerId?: number,
-    associates: [],
-    curriculum: curriculum,
+    associates?: [],
+    curriculum?: curriculum,
     resourceMetaData?: any
 }

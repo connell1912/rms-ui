@@ -68,6 +68,6 @@ export const addUser = async (body: IUser) => {
   }
 };
 
-export const addBatch = (body: IBatch) => {
-  return axiosConfig.post('newbatch.app', body);
+export const addBatch = async (body: IBatch) => {
+  return await axiosConfig.post('newbatch.app', body);
 }
