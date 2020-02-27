@@ -1,11 +1,11 @@
 export enum curriculumEnum {
-    JAVA_MSA,
-    CSHARP,
-    PEGA,
-    JTA,
-    REACT,
-    AI,
-    MOBILE
+    JAVA_MSA = "JAVA_MSA",
+    CSHARP = "CSHARP",
+    PEGA = "PEGA",
+    JTA = "JTA",
+    REACT = "REACT",
+    AI = "AI",
+    MOBILE = "MOBILE"
 }
 
 export default interface IBatch {
@@ -15,7 +15,7 @@ export default interface IBatch {
     endDate: Date,
     trainerId?: number,
     coTrainerId?: number,
-    associates?: [],
-    curriculum?: curriculumEnum,
+    associates?: any,
+    curriculum?: any,
     resourceMetaData?: any
 }

@@ -1,7 +1,7 @@
 import { combineReducers } from "redux";
-import { loginReducer } from "./login-reducer";
-import { registerReducer } from "./register-reducer";
-import { createReducer } from "../../batch-service/reducers/create-reducer";
+import { loginReducer } from "../employee-service/reducers/login-reducer";
+import { registerReducer } from "../employee-service/reducers/register-reducer";
+import { createReducer } from "../batch-service/reducers/create-reducer";
 
 export interface IUserState {
   currentUser: any;

@@ -1,5 +1,5 @@
 import { createTypes } from "../action-mappers/create-action";
-import { IBatchState } from "../../employee-service/reducers";
+import { IBatchState } from "../../utility";
 
 const initialState: IBatchState = {
   addBatch: null,

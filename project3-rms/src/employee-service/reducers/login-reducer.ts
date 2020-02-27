@@ -1,4 +1,4 @@
-import { IUserState } from ".";
+import { IUserState } from "../../utility";
 import { loginTypes } from "../action-mappers/login-action";
 
 const initialState: IUserState = {

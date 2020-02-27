@@ -40,7 +40,8 @@ export const NavBarComponent = (props: any) => {
               </DropdownToggle>
               <DropdownMenu right>
                 <DropdownItem href="/createbatch">New Batch</DropdownItem>
-                <DropdownItem>Logout</DropdownItem>
+                <DropdownItem href="/batchtable">View Batches</DropdownItem>
+                <DropdownItem disabled>Logout</DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>

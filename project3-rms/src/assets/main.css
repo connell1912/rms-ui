@@ -25,6 +25,15 @@
   border-radius: 20px;
 }
 
+.batchTable {
+  background-color: #f8f9fa;
+  padding: 40px;
+  margin-top: 10%;
+  margin-left: 12.5%;
+  max-width: 75%;
+  border-radius: 20px;
+}
+
 .createBatchDiv {
   background-color: #f8f9fa;
   padding: 40px;

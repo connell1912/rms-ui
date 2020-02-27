@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { IState } from "../../reducers";
+import { IState } from "../../../utility";
 import { LoginComponent } from "./LoginComponent";
 import { updateCurrentUser } from '../../action-mappers/login-action'
 

@@ -1,4 +1,4 @@
-import { IRegisterState } from ".";
+import { IRegisterState } from "../../utility";
 import { registerTypes } from "../action-mappers/register-action";
 
 const initialState: IRegisterState = {

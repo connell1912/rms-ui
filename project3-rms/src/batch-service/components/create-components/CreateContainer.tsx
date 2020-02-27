@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { IState } from "../../../employee-service/reducers";
+import { IState } from "../../../utility";
 import { CreateComponent } from "./CreateComponent";
 import { createBatch } from "../../action-mappers/create-action";
 

@@ -12,8 +12,8 @@ export const CreateComponent: React.FC<any> = (props: IBatchProps) => {
   const [batchName, setBatchName] = useState("");
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
-  // const [associates, setAssociates] = useState([]);
-  const [curriculum, setCurriculum] = useState(curriculumEnum.PEGA);
+  const [associates, setAssociates] = useState("");
+  const [curriculum, setCurriculum] = useState("");
 
   return (
     <>
@@ -29,13 +29,13 @@ export const CreateComponent: React.FC<any> = (props: IBatchProps) => {
               endDate: endDate,
               trainerId: 0,
               coTrainerId: 0,
-              associates: [],
+              associates: associates,
               curriculum: curriculum
             }).then(r => console.log(r.data))
           }
         >
           <FormGroup row>
-          <Label for="batchName" sm={2}>
+            <Label for="batchName" sm={2}>
               Batch Name
             </Label>
             <Col sm={10}>
@@ -50,7 +50,7 @@ export const CreateComponent: React.FC<any> = (props: IBatchProps) => {
             </Col>
           </FormGroup>
           <FormGroup row>
-          <Label for="startDate" sm={2}>
+            <Label for="startDate" sm={2}>
               Start Date
             </Label>
             <Col sm={10}>
@@ -65,7 +65,7 @@ export const CreateComponent: React.FC<any> = (props: IBatchProps) => {
             </Col>
           </FormGroup>
           <FormGroup row>
-          <Label for="endDate" sm={2}>
+            <Label for="endDate" sm={2}>
               End Date
             </Label>
             <Col sm={10}>
@@ -79,21 +79,21 @@ export const CreateComponent: React.FC<any> = (props: IBatchProps) => {
               />
             </Col>
           </FormGroup>
-          {/* <FormGroup row>
+          <FormGroup row>
           <Label for="associates" sm={2}>
               Associates
             </Label>
             <Col sm={10}>
               <Input
                 required
-                type="text"
+                type="number"
                 name="associates"
                 id="associates"
                 placeholder="Associates"
                 onChange={val => setAssociates(val.target.value)}
               />
             </Col>
-          </FormGroup> */}
+          </FormGroup>
           <FormGroup row>
             <Label for="curriculum" sm={2}>
               Curriculum
@@ -101,20 +101,18 @@ export const CreateComponent: React.FC<any> = (props: IBatchProps) => {
             <Col sm={10}>
               <Input
                 type="select"
-                name="select"
-                id="exampleSelect"
-                onChange={val => setCurriculum(val.target.valueAsNumber)}
+                name="curriculum"
+                id="curriculum"
+                onChange={val => setCurriculum(val.target.value)}
               >
-                <option selected disabled>
-                  Select a Curriculum
-                </option>
-                <option value={0}>JAVA_MSA</option>
-                <option value={1}>CSHARP</option>
-                <option value={2}>PEGA</option>
-                <option value={3}>JTA</option>
-                <option value={4}>REACT</option>
-                <option value={5}>AI</option>
-                <option value={6}>MOBILE</option>
+                <option selected disabled>Select A Curriculum</option>
+                <option value={curriculumEnum.JAVA_MSA}>JAVA_MSA</option>
+                <option value={curriculumEnum.CSHARP}>CSHARP</option>
+                <option value={curriculumEnum.PEGA}>PEGA</option>
+                <option value={curriculumEnum.JTA}>JTA</option>
+                <option value={curriculumEnum.REACT}>REACT</option>
+                <option value={curriculumEnum.AI}>AI</option>
+                <option value={curriculumEnum.MOBILE}>MOBILE</option>
               </Input>
             </Col>
           </FormGroup>
