@@ -3,6 +3,7 @@ import { getBatch } from "../../../utility/api";
 import { Table } from "reactstrap";
 import IBatch from "../../model/IBatch";
 import { BatchDisplayComponent } from "./BatchDisplayComponent";
+import MaterialTableDemo from "../../../assets/display-components/TableComponent";
 
 export const BatchTableComponent: React.FC<any> = (props: any) => {
   const [batchList, setBatchList] = useState([]);
@@ -12,6 +13,8 @@ export const BatchTableComponent: React.FC<any> = (props: any) => {
 
   return (
     <div className="batchTable">
+
+      <MaterialTableDemo/>
       <Table striped>
         <thead>
           <tr>

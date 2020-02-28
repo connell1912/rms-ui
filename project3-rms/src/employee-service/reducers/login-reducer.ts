@@ -1,6 +1,6 @@
 
 import { loginTypes } from "../action-mappers/login-action";
-import { IUser } from "../model/IUser";
+// import { IUser } from "../model/IUser";
 import { IUserState } from "../../utility";
 
 const initialState: IUserState = {
