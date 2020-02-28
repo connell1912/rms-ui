@@ -11,6 +11,7 @@ import RegisterComponent from "./employee-service/components/register-components
 import CreateComponent from "./batch-service/components/create-components/CreateContainer";
 import { NavBarComponent } from "./assets/display-components/NavBarComponent";
 import BatchTableComponent from "./batch-service/components/display-components/BatchTableComponent";
+import { BatchDisplayComponent } from "./batch-service/components/display-components/BatchDisplayComponent";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
               <Route path="/register" component={RegisterComponent} />
               <Route path="/createbatch" component={CreateComponent}/>
               <Route path="/batchtable" component={BatchTableComponent}/>
+              <Route path="/buildingtable" component={BatchDisplayComponent}/>
               <Route path="/" component={LoginComponent} />
             </Switch>
           </Router>

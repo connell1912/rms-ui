@@ -75,3 +75,7 @@ export const addBatch = (body: IBatch) => {
 export const getBatch = () => {
   return axiosConfig.get('batch/allbatches');
 }
+
+export const getBuildings = () => {
+  return axiosConfig.get("building/all")
+}
