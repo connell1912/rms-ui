@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { getBatch } from "../../../utility/api";
 import { Table } from "reactstrap";
-import { Link } from "react-router-dom";
 import IBatch from "../../model/IBatch";
 import { BatchDisplayComponent } from "./BatchDisplayComponent";
 
@@ -32,8 +31,6 @@ export const BatchTableComponent: React.FC<any> = (props: any) => {
           ))}
         </tbody>
       </Table>
-
-      <Link to="/">Landing</Link>
     </div>
   );
 };
