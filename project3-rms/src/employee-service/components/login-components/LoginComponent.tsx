@@ -1,67 +1,134 @@
-import React, { SyntheticEvent, useState } from "react";
-import { Form, FormGroup, Label, Col, Input, Button } from "reactstrap";
+import React, { SyntheticEvent } from "react";
+import { Form, Input, Button, FormGroup, Label, Col } from "reactstrap";
+
+interface ILoginState {
+  email: string;
+  password: string;
+}
 
 interface ILoginProps {
-  updateCurrentUser: (email: string, password: string) => void;
+ /*  currentUser: any; */
+  updateCurrentUser: (e: string, p: string) => void;
   loginMessage: string;
 }
 
-export const LoginComponent: React.FC<any> = (props: ILoginProps) => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+export class LoginComponent extends React.Component<ILoginProps, ILoginState> {
+  constructor(props: any) {
+    super(props);
+    this.state = {
+      email: "",
+      password: ""
+    };
+  }
 
-  const submitLogin = async (event: SyntheticEvent) => {
-    event.preventDefault();
-    props.updateCurrentUser(email, password);
+  updateEmail = (event: any) => {
+    this.setState({
+      ...this.state,
+      email: event.target.value
+    });
   };
 
-  return (
-    <>
+  updatePassword = (event: any) => {
+    this.setState({
+      ...this.state,
+      password: event.target.value
+    });
+  };
+
+  /* submitLogin = async (event: SyntheticEvent) => {
+    event.preventDefault();
+    await this.props.updateCurrentUser(
+      this.state.email,
+      this.state.password
+      /* false */
+    /* ); */
+    /* console.log(this.props.currentUser);
+    if (this.props.currentUser === null) {
+      console.log("You are not a user");
+    } else {
+      if (this.props.currentUser["role"] === "ADMIN") {
+        console.log("Admin");
+        this.props.history.push("/admin");
+      } else if (this.props.currentUser["role"] !== "ADMIN") {
+        console.log("employee");
+        this.props.history.push("/employee");
+      }
+    } */
+  /* }; */
+
+  submitLogin = async (event: SyntheticEvent) => {
+    event.preventDefault();
+    this.props.updateCurrentUser(this.state.email, this.state.password);
+  }
+
+  render() {
+    return (
+      /* {<div id="login-body">
+        <div className="login">
+          <div>
+            <h1>Login</h1>
+            Email:
+            <input
+              type="text"
+              placeholder="email@email.com"
+              className="txtb"
+              onChange={this.updateEmail}
+            />
+            Password:
+            <input
+              type="password"
+              placeholder="Password"
+              className="txtb"
+              onChange={this.updatePassword}
+            />
+            <input
+              type="submit"
+              value="Login"
+              className="signup-btn"
+              onClick={this.submitLogin}
+            />
+            <Link id="link" to="/register">
+              Add an Employee
+            </Link>
+          </div>
+        </div>
+      </div>} */
       <div className="loginDiv">
-        <h2>Login</h2>
-        <Form className="loginForm" onSubmit={submitLogin}>
-          <FormGroup row>
+          <h2>Login</h2>
+        <Form className="loginForm" onSubmit = {this.submitLogin}>
+        <FormGroup row>
             <Label for="email" sm={2}>
               Email
             </Label>
             <Col sm={10}>
-              <Input
-                required
-                type="email"
-                name="email"
-                id="email"
-                value={email}
-                placeholder="Email"
-                onChange={val => setEmail(val.target.value)}
+          <Input 
+            required
+              type="email"
+              placeholder="Email"
+              value={this.state.email}
+              onChange={this.updateEmail}
               />
-              {/* this is an example of data binding,
-                            we take data from the state and put it
-                            in our tsx */}
-            </Col>
+              </Col>
           </FormGroup>
           <FormGroup row>
             <Label for="password" sm={2}>
               Password
             </Label>
             <Col sm={10}>
-              <Input
-                required
-                type="password"
-                name="password"
-                id="password"
-                value={password}
-                placeholder="Password"
-                onChange={val => setPassword(val.target.value)}
+          <Input 
+            required
+              type="password"
+              placeholder="Password"
+              value={this.state.password}
+              onChange={this.updatePassword}
               />
-            </Col>
+              </Col>
           </FormGroup>
-          <Button outline id="submitButton" color="secondary" type="submit">
-            Login
-          </Button>
+          <Button id="login">Login</Button>
         </Form>
-        <br />
-        <p>{props.loginMessage}</p>
-        </div>
-    </>
-  );
-};
+        <br/>
+        <p>{this.props.loginMessage}</p>
+      </div>
+    );
+  }
+}

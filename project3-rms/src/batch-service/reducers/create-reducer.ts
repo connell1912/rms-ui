@@ -1,5 +1,5 @@
 import { createTypes } from "../action-mappers/create-action";
-import { IBatchState } from ".";
+import { IBatchState } from "../../utility";
 
 const initialState: IBatchState = {
   addBatch: null,
@@ -18,7 +18,7 @@ export const createReducer = (state = initialState, action: any) => {
     case createTypes.UNSUCCESSFUL_CREATE: {
       return {
         ...state,
-        createMessage: "Something Went Wrong"
+        createMessage: action.payload.createMessage
       };
     }
 
