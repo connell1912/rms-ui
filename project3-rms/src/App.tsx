@@ -7,10 +7,10 @@ import { store } from "./Store";
 import { history } from "./utility/history";
 import { Router, Switch, Route } from "react-router";
 import LoginComponent from "./employee-service/components/login-components/LoginContainer";
-// import RegisterComponent from "./employee-service/components/register-components/RegisterContainer";
+import RegisterComponent from "./employee-service/components/register-components/RegisterComponent";
 import CreateComponent from "./batch-service/components/create-components/CreateContainer";
-import { NavBarComponent } from "./assets/display-components/NavBarComponent";
-import BatchTableComponent from "./batch-service/components/display-components/BatchTableComponent";
+import { AddressTableComponent } from "./campus-service/components/address-table/AddressTableComponent";
+import NavBarComponent from "./assets/display-components/NavBarComponent";
 
 function App() {
   return (
@@ -25,10 +25,10 @@ function App() {
               <NavBarComponent />
             </div>
             <Switch>
-              {/* <Route path="/register" component={RegisterComponent} /> */}
+              <Route path="/register" component={RegisterComponent} />
               <Route path="/createbatch" component={CreateComponent}/>
-              <Route path="/batchtable" component={BatchTableComponent}/>
-              <Route path="/login" component={LoginComponent} />
+              <Route path="/addresses" component={AddressTableComponent}/>
+              <Route path="/" component={LoginComponent} />
             </Switch>
           </Router>
         </Provider>
