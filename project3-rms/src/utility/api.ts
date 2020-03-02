@@ -1,6 +1,9 @@
 import { axiosConfig } from "./axiosConfig";
 import IBatch from "../batch-service/model/IBatch";
 import axios from "axios";
+import { IWorkOrder } from "../work-order-service/model/IWorkOrder";
+import { IRoom } from "../work-order-service/model/IRoom";
+import IAddress from "../campus-service/model/IAddress";
 
 export const apiLogin = async (email: string, password: string) => {
   try {
@@ -127,3 +130,31 @@ export const addBatch = (body: IBatch) => {
 export const getBatch = () => {
   return axiosConfig.get("batch/all");
 };
+
+export const deleteBatch = () => {
+  return axiosConfig.get("batch/delete");
+}
+
+export const getWOList = () => {
+  return axiosConfig.get("work-order-service/workorder/all");
+}
+
+export const publishWorkOrder = (body: IWorkOrder) => {
+  return axiosConfig.post("work-order-service/workorder/newworkorder", body);
+}
+
+export const getRooms = () => {
+  return axiosConfig.get("campus-service/room/all");
+}
+
+export const publishRoom = (body: IRoom) => {
+  return axiosConfig.post("campus-service/room/new", body);
+}
+
+export const getAddresses = () => {
+  return axiosConfig.get("address/all");
+}
+
+export const addAddress = (body:IAddress) => {
+  return axiosConfig.post("address/new", body);
+}

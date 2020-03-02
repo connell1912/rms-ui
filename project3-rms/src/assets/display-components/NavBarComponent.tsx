@@ -41,6 +41,13 @@ export const NavBarComponent = (props: any) => {
               <DropdownMenu right>
                 <DropdownItem href="/createbatch">New Batch</DropdownItem>
                 <DropdownItem href="/batchtable">View Batches</DropdownItem>
+                <DropdownItem divider />
+                <DropdownItem href="/addresses">View Addresses</DropdownItem>
+                <DropdownItem divider />
+                <DropdownItem href="/roomtable">View Rooms</DropdownItem>
+                <DropdownItem divider />
+                <DropdownItem href="/addworkorder">Add Work Order</DropdownItem>
+                <DropdownItem href="/workordertable">View Work Orders</DropdownItem>
                 <DropdownItem disabled>Logout</DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
