@@ -12,13 +12,13 @@ export const createAddressReducer = (state = initialState, action: any) => {
       return {
         ...state,
         addAddress: action.payload.addAddress,
-        createMessage: "New address added"
+        createAddressMessage: "New address added"
       };
     }
     case createAddressTypes.UNSUCCESSFUL_CREATE: {
       return {
         ...state,
-        createMessage: action.payload.createMessage
+        createAddressMessage: action.payload.createAddressMessage
       };
     }
     default:

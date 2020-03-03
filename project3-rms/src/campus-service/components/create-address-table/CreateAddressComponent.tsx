@@ -5,7 +5,7 @@ import { addAddress } from "../../utilities/api";
 
 interface IAddressProps {
   addAddress: (body: IAddress) => void;
-  createMessage: string;
+  createAddressMessage: string;
 }
 
 export const CreateAddressComponent: React.FC<any> = (props: IAddressProps) => {
@@ -111,7 +111,7 @@ export const CreateAddressComponent: React.FC<any> = (props: IAddressProps) => {
             Submit
           </Button>
         </Form>
-        <p>{props.createMessage}</p>
+        <p>{props.createAddressMessage}</p>
       </div>
     </>
   );

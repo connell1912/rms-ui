@@ -5,7 +5,7 @@ import { CreateAddressComponent } from "../../components/create-address-table/Cr
 
 export const mapStateToProps = (state: IState) => {
     return{
-        createMessage: state.addressState.createAddressMessage
+        createAddressMessage: state.addressState.createAddressMessage
     };
 };
 
