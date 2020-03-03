@@ -18,6 +18,7 @@ export enum amenityStatusEnum {
 }
 
 export interface IAmenity {
-    amenityType: amenityTypeEnum,
-    amenityStatus: amenityStatusEnum
+    id: number,
+    amenityType: any,
+    amenityStatus: any
 }
