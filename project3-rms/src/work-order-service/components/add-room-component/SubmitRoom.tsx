@@ -1,8 +1,7 @@
 import React, { SyntheticEvent } from "react";
-import { publishWorkOrder, publishRoom } from "../../../utility/api";
+import { publishRoom } from "../../../utility/api";
 import { history } from "../../../utility/history";
 import { Input, Form, FormGroup, Label, Col, Button } from "reactstrap";
-import { Link } from "react-router-dom";
 
 interface INewRoomState {
   roomNumber: string;

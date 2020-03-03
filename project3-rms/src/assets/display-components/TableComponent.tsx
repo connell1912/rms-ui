@@ -1,8 +1,8 @@
 import React from "react";
 import MaterialTable, { Column } from "material-table";
-import IBatch from "../../batch-service/model/IBatch";
-import axiosConfig from "../../utility/axiosConfig";
-import { addBatch, deleteBatch } from "../../utility/api";
+// import IBatch from "../../batch-service/model/IBatch";
+// import axiosConfig from "../../utility/axiosConfig";
+// import { addBatch, deleteBatch } from "../../utility/api";
 
 interface Row {
   batchId?: number;

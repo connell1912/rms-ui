@@ -2,7 +2,6 @@ import React, { SyntheticEvent } from "react";
 import { publishWorkOrder } from "../../../utility/api";
 import { history } from "../../../utility/history";
 import { Input, Form, FormGroup, Label, Col, Button } from "reactstrap";
-import { Link } from "react-router-dom";
 
 interface INewWOState {
   category: string;

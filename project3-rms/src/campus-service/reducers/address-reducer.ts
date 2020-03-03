@@ -1,5 +1,5 @@
 import { createAddressTypes } from "../action-mappers/create-address-action";
-import { IAddressState, state } from "../../utility";
+import { IAddressState } from "../../utility";
 
 const initialState: IAddressState = {
   addAddress: null,

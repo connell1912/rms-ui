@@ -127,15 +127,15 @@ export const apiRegister = async (
 /* Batch APIs */
 
 export const addBatch = (body: IBatch) => {
-  return axiosConfig.post("batch/add", body);
+  return axiosConfig.post("batch-service/batch/add", body);
 };
 
 export const getBatch = () => {
-  return axiosConfig.get("batch/all");
+  return axiosConfig.get("batch-service/batch/all");
 };
 
 export const deleteBatch = () => {
-  return axiosConfig.get("batch/delete");
+  return axiosConfig.get("batch-service/batch/delete");
 }
 
 /* Work Order APIs */
@@ -161,25 +161,31 @@ export const publishRoom = (body: IRoom) => {
 /* Address APIs */
 
 export const getAddresses = () => {
-  return axiosConfig.get("address/all");
+  return axiosConfig.get("campus-service/address/all");
 }
 
 export const addAddress = (body:IAddress) => {
-  return axiosConfig.post("address/new", body);
+  return axiosConfig.post("campus-service/address/new", body);
 }
 
 /* Amenity APIs */
 
 export const getAmenities = () => {
-  return axiosConfig.get("amenity/all");
+  return axiosConfig.get("campus-service/amenity/all");
 }
 
 export const addAmenity = (body: IAmenity) => {
-  return axiosConfig.post("amenity/new", body);
+  return axiosConfig.post("campus-service/amenity/new", body);
 }
 
 /* Building APIs */
 
 export const getBuildings = () => {
-  return axiosConfig.get("building/all")
+  return axiosConfig.get("campus-service/building/all")
+}
+
+/* Campus APIs */
+
+export const getCampuses = () => {
+  return axiosConfig.get("campus-service/campus/all");
 }
