@@ -11,6 +11,7 @@ import RegisterComponent from "./employee-service/components/register-components
 import CreateComponent from "./batch-service/components/create-components/CreateContainer";
 import { AddressTableComponent } from "./campus-service/components/address-table/AddressTableComponent";
 import NavBarComponent from "./assets/display-components/NavBarComponent";
+import CreateAddressComponent from "./campus-service/components/create-address-table/CreateAddressContainer";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
               <Route path="/register" component={RegisterComponent} />
               <Route path="/createbatch" component={CreateComponent}/>
               <Route path="/addresses" component={AddressTableComponent}/>
+              <Route path="/newaddress" component={CreateAddressComponent}/>
               <Route path="/" component={LoginComponent} />
             </Switch>
           </Router>
