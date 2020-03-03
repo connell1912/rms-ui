@@ -57,6 +57,16 @@ export const NavBarComponent = (props: any) => {
                   View Work Orders
                 </DropdownItem>
                 <DropdownItem divider />
+                <DropdownItem header>Campuses</DropdownItem>
+                <DropdownItem href="/campustable">
+                  View Campuses
+                </DropdownItem>
+                <DropdownItem divider />
+                <DropdownItem header>Buildings</DropdownItem>
+                <DropdownItem href="/buildingtable">
+                  View Buildings
+                </DropdownItem>
+                <DropdownItem divider />
                 <DropdownItem disabled>Logout</DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
