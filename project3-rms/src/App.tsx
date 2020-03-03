@@ -11,7 +11,7 @@ import LoginComponent from "./employee-service/components/login-components/Login
 import CreateComponent from "./batch-service/components/create-components/CreateContainer";
 import { NavBarComponent } from "./assets/display-components/NavBarComponent";
 import BatchTableComponent from "./batch-service/components/display-components/BatchTableComponent";
-
+import CampusComponent from "./campus-service/components/CampusContainer";
 function App() {
   return (
     <>
@@ -29,6 +29,7 @@ function App() {
               <Route path="/createbatch" component={CreateComponent}/>
               <Route path="/batchtable" component={BatchTableComponent}/>
               <Route path="/login" component={LoginComponent} />
+              <Route path="/camp" component={CampusComponent}/>
             </Switch>
           </Router>
         </Provider>
