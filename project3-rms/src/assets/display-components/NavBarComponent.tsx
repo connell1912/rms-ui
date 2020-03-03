@@ -39,8 +39,24 @@ export const NavBarComponent = (props: any) => {
                 {/* {updateCurrentUser} */}
               </DropdownToggle>
               <DropdownMenu right>
+                <DropdownItem header>Batches</DropdownItem>
                 <DropdownItem href="/createbatch">New Batch</DropdownItem>
                 <DropdownItem href="/batchtable">View Batches</DropdownItem>
+                <DropdownItem divider />
+                <DropdownItem header>Addresses</DropdownItem>
+                <DropdownItem href="/addaddress">Add Address</DropdownItem>
+                <DropdownItem href="/addresses">View Addresses</DropdownItem>
+                <DropdownItem divider />
+                <DropdownItem header>Rooms</DropdownItem>
+                <DropdownItem href="/addroom">Add Room</DropdownItem>
+                <DropdownItem href="/roomtable">View Rooms</DropdownItem>
+                <DropdownItem divider />
+                <DropdownItem header>Work Orders</DropdownItem>
+                <DropdownItem href="/addworkorder">Add Work Order</DropdownItem>
+                <DropdownItem href="/workordertable">
+                  View Work Orders
+                </DropdownItem>
+                <DropdownItem divider />
                 <DropdownItem disabled>Logout</DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>

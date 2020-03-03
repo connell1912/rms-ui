@@ -2,6 +2,7 @@ import { combineReducers } from "redux";
 import { loginReducer } from "../employee-service/reducers/login-reducer";
 // import { registerReducer } from "../employee-service/reducers/register-reducer";
 import { createReducer } from "../batch-service/reducers/create-reducer";
+import { createAddressReducer } from "../campus-service/reducers/address-reducer";
 
 export interface IUserState {
   currentUser: any;
@@ -18,16 +19,23 @@ export interface IBatchState {
   createMessage: string;
 }
 
+export interface IAddressState {
+  addAddress: any;
+  createAddressMessage: string;
+}
+
 export interface IState {
   userState: IUserState;
   // registerState: IRegisterState;
-  batchState: IBatchState; 
+  batchState: IBatchState;
+  addressState: IAddressState;
 }
 
 export const state = combineReducers<IState>({
   userState: loginReducer,
   // registerState: registerReducer,
-  batchState: createReducer
+  batchState: createReducer,
+  addressState: createAddressReducer
 });
 
 
