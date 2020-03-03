@@ -1,5 +1,5 @@
 import React from 'react';
-import IAddress from "../../model/IAddress";
+import IAddress from "../../../model/IAddress";
 
 export interface IAR{
     address: IAddress

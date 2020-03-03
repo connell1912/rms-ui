@@ -50,7 +50,7 @@ export default function MaterialTableDemo() {
 
   return (
     <MaterialTable
-      title="Table"
+      title="Batch Table"
       columns={state.columns}
       data={state.data}
       editable={{

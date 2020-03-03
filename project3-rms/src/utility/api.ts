@@ -4,6 +4,7 @@ import axios from "axios";
 import { IWorkOrder } from "../work-order-service/model/IWorkOrder";
 import { IRoom } from "../work-order-service/model/IRoom";
 import IAddress from "../campus-service/model/IAddress";
+import { IAmenity } from "../campus-service/model/IAmenity";
 
 export const apiLogin = async (email: string, password: string) => {
   try {
@@ -123,6 +124,8 @@ export const apiRegister = async (
   }
 };
 
+/* Batch APIs */
+
 export const addBatch = (body: IBatch) => {
   return axiosConfig.post("batch/add", body);
 };
@@ -135,6 +138,8 @@ export const deleteBatch = () => {
   return axiosConfig.get("batch/delete");
 }
 
+/* Work Order APIs */
+
 export const getWOList = () => {
   return axiosConfig.get("work-order-service/workorder/all");
 }
@@ -142,6 +147,8 @@ export const getWOList = () => {
 export const publishWorkOrder = (body: IWorkOrder) => {
   return axiosConfig.post("work-order-service/workorder/newworkorder", body);
 }
+
+/* Room APIs */
 
 export const getRooms = () => {
   return axiosConfig.get("campus-service/room/all");
@@ -151,10 +158,28 @@ export const publishRoom = (body: IRoom) => {
   return axiosConfig.post("campus-service/room/new", body);
 }
 
+/* Address APIs */
+
 export const getAddresses = () => {
   return axiosConfig.get("address/all");
 }
 
 export const addAddress = (body:IAddress) => {
   return axiosConfig.post("address/new", body);
+}
+
+/* Amenity APIs */
+
+export const getAmenities = () => {
+  return axiosConfig.get("amenity/all");
+}
+
+export const addAmenity = (body: IAmenity) => {
+  return axiosConfig.post("amenity/new", body);
+}
+
+/* Building APIs */
+
+export const getBuildings = () => {
+  return axiosConfig.get("building/all")
 }

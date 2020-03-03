@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { AddressTableDisplay } from "./AddressTableDisplay";
-import { getAddresses } from "../../../utility/api";
-import IAddress from "../../model/IAddress";
+import { getAddresses } from "../../../../utility/api";
+import IAddress from "../../../model/IAddress";
 import { Table } from "reactstrap";
 
 export const AddressTableComponent:React.FC <any> = (props:any) => {

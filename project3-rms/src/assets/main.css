@@ -92,6 +92,8 @@ body {
   background-color: #494d56;
   width: 100%;
   bottom: 0px;
+  padding-bottom: 20px;
+  position: absolute;
   color: white;
 }
 
