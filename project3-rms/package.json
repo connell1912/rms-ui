@@ -58,6 +58,7 @@
     ]
   },
   "devDependencies": {
+    "@types/enzyme-adapter-react-16": "^1.0.6",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "raf": "^3.4.1"
