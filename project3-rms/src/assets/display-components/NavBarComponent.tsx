@@ -39,8 +39,39 @@ export const NavBarComponent = (props: any) => {
                 {/* {updateCurrentUser} */}
               </DropdownToggle>
               <DropdownMenu right>
-                <DropdownItem href="/createbatch">New Batch</DropdownItem>
+                <DropdownItem header>Batches</DropdownItem>
+                <DropdownItem href="/createbatch">Add Batch</DropdownItem>
                 <DropdownItem href="/batchtable">View Batches</DropdownItem>
+                <DropdownItem divider />
+                <DropdownItem header>Addresses</DropdownItem>
+                <DropdownItem href="/addaddress">Add Address</DropdownItem>
+                <DropdownItem href="/addresses">View Addresses</DropdownItem>
+                <DropdownItem divider />
+                <DropdownItem header>Amenities</DropdownItem>
+                <DropdownItem href="/newamenity">Add Amenity</DropdownItem>
+                <DropdownItem href="/amenities">View Amenities</DropdownItem>
+                <DropdownItem divider />
+                <DropdownItem header>Rooms</DropdownItem>
+                <DropdownItem href="/addroom">Add Room</DropdownItem>
+                <DropdownItem href="/roomtable">View Rooms</DropdownItem>
+                <DropdownItem divider />
+                <DropdownItem header>Work Orders</DropdownItem>
+                <DropdownItem href="/addworkorder">Add Work Order</DropdownItem>
+                <DropdownItem href="/workordertable">
+                  View Work Orders
+                </DropdownItem>
+                <DropdownItem divider />
+                <DropdownItem header>Campuses</DropdownItem>
+                <DropdownItem href="/campustable">View Campuses</DropdownItem>
+                <DropdownItem divider />
+                <DropdownItem header>Buildings</DropdownItem>
+                <DropdownItem href="/newbuilding">
+                  Add Building
+                </DropdownItem>
+                <DropdownItem href="/buildingtable">
+                  View Buildings
+                </DropdownItem>
+                <DropdownItem divider />
                 <DropdownItem disabled>Logout</DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
