@@ -8,9 +8,9 @@ export const NavBarComponent = (props:any) => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <div>
+    <div className="navbarcomponent">
       <Navbar color="" light expand="md" style={{ backgroundColor: "#f26900" }}>
-        <NavbarBrand href="/">Resource Management System</NavbarBrand>
+        <NavbarBrand className="logoIMG" href="/">Resource Management System</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>

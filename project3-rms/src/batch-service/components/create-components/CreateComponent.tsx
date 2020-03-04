@@ -10,10 +10,10 @@ interface IBatchProps {
 
 export const CreateComponent: React.FC<any> = (props: IBatchProps) => {
   const [batchName, setBatchName] = useState("");
-  const [startDate, setStartDate] = useState();
-  const [endDate, setEndDate] = useState();
-//   const [trainerId, setTrainerId] = useState();
-//   const [coTrainerId, setCoTrainerId] = useState();
+  const [startDate, setStartDate] = useState(new Date());
+  const [endDate, setEndDate] = useState(new Date());
+  //   const [trainerId, setTrainerId] = useState();
+  //   const [coTrainerId, setCoTrainerId] = useState();
   const [associates, setAssociates] = useState();
   const [curriculum, setCurriculum] = useState();
 
@@ -55,7 +55,7 @@ export const CreateComponent: React.FC<any> = (props: IBatchProps) => {
                 name="startDate"
                 id="startDate"
                 placeholder="Start Date for Batch"
-                onChange={val => setStartDate(val.target.value)}
+                onChange={val => setStartDate(new Date(val.target.value))}
               />
             </Col>
           </FormGroup>
@@ -67,7 +67,7 @@ export const CreateComponent: React.FC<any> = (props: IBatchProps) => {
                 name="endDate"
                 id="endDate"
                 placeholder="Projected End Date for Batch"
-                onChange={val => setEndDate(val.target.value)}
+                onChange={val => setEndDate(new Date(val.target.value))}
               />
             </Col>
           </FormGroup>
