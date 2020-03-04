@@ -4,13 +4,16 @@ import { createAmenity } from "../../action-mappers/create-amenity-action";
 import CreateAmenityComponent from "../../components/amenity-components/CreateAmenityComponent";
 
 export const mapStateToProps = (state: IState) => {
-    return{
-        createAmenityMessage: state.amenityState.createAmenityMessage
-    };
+  return {
+    createAmenityMessage: state.amenityState.createAmenityMessage
+  };
 };
 
 export const mapDispatchToProps = {
-    createAmenity
+  createAmenity
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(CreateAmenityComponent);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(CreateAmenityComponent);

@@ -18,9 +18,10 @@ import { AddressTableComponent } from "./campus-service/components/address-compo
 import SubmitRoom from "./work-order-service/components/add-room-component/SubmitRoom";
 import CreateAddressComponent from "./campus-service/components/address-components/CreateAddressContainer";
 import CampusComponent from "./campus-service/components/campus-components/CampusContainer";
-import { BuildingTableComponent } from "./campus-service/components/building-components/BuildingTableComponent";
+import { BuildingTableComponent } from "./campus-service/components/building-components/building-display-components/BuildingTableComponent";
 import { AmenityTableComponent } from "./campus-service/components/amenity-components/amenity-display-components/AmenityTableComponent";
 import CreateAmenityComponent from "./campus-service/components/amenity-components/CreateAmenityContainer";
+import CreateBuildingComponent from "./campus-service/components/building-components/CreateBuildingContainer";
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
               <Route path="/newamenity" component={CreateAmenityComponent}/>
               <Route path="/amenities" component={AmenityTableComponent}/>
               <Route path="/campustable" component={CampusComponent}/>
+              <Route path="/newbuilding" component={CreateBuildingComponent}/>
               <Route path="/buildingtable" component={BuildingTableComponent}/>
               <Route path="/" component={LoginComponent} />
             </Switch>

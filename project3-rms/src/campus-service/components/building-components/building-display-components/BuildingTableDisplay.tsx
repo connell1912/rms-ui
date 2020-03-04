@@ -1,5 +1,5 @@
 import React from 'react'
-import IBuilding from '../../model/IBuilding';
+import IBuilding from '../../../model/IBuilding';
 
 export interface IBB {
     building: IBuilding

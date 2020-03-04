@@ -1,8 +1,8 @@
 import React from "react"
 import { useState, useEffect } from "react"
-import { getBuildings } from "../../../utility/api";
+import { getBuildings } from "../../../../utility/api";
 import { Table } from "reactstrap";
-import IBuilding from "../../model/IBuilding";
+import IBuilding from "../../../model/IBuilding";
 import { BuildingTableDisplay } from "./BuildingTableDisplay";
 
 

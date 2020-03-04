@@ -5,6 +5,7 @@ import { IWorkOrder } from "../work-order-service/model/IWorkOrder";
 import { IRoom } from "../work-order-service/model/IRoom";
 import IAddress from "../campus-service/model/IAddress";
 import { IAmenity } from "../campus-service/model/IAmenity";
+import IBuilding from "../campus-service/model/IBuilding";
 
 export const apiLogin = async (email: string, password: string) => {
   try {
@@ -136,56 +137,60 @@ export const getBatch = () => {
 
 export const deleteBatch = () => {
   return axiosConfig.get("batch-service/batch/delete");
-}
+};
 
 /* Work Order APIs */
 
 export const getWOList = () => {
   return axiosConfig.get("work-order-service/workorder/all");
-}
+};
 
 export const publishWorkOrder = (body: IWorkOrder) => {
   return axiosConfig.post("work-order-service/workorder/newworkorder", body);
-}
+};
 
 /* Room APIs */
 
 export const getRooms = () => {
   return axiosConfig.get("campus-service/room/all");
-}
+};
 
 export const publishRoom = (body: IRoom) => {
   return axiosConfig.post("campus-service/room/new", body);
-}
+};
 
 /* Address APIs */
 
 export const getAddresses = () => {
   return axiosConfig.get("campus-service/address/all");
-}
+};
 
-export const addAddress = (body:IAddress) => {
+export const addAddress = (body: IAddress) => {
   return axiosConfig.post("campus-service/address/new", body);
-}
+};
 
 /* Amenity APIs */
 
 export const getAmenities = () => {
   return axiosConfig.get("campus-service/amenity/all");
-}
+};
 
 export const addAmenity = (body: IAmenity) => {
   return axiosConfig.post("campus-service/amenity/new", body);
-}
+};
 
 /* Building APIs */
 
 export const getBuildings = () => {
-  return axiosConfig.get("campus-service/building/all")
-}
+  return axiosConfig.get("campus-service/building/all");
+};
+
+export const addBuilding = (body: IBuilding) => {
+  return axiosConfig.post("campus-service/building/new", body);
+};
 
 /* Campus APIs */
 
 export const getCampuses = () => {
   return axiosConfig.get("campus-service/campus/all");
-}
+};
