@@ -7,6 +7,7 @@ import IAddress from "../campus-service/model/IAddress";
 import { IAmenity } from "../campus-service/model/IAmenity";
 import IBuilding from "../campus-service/model/IBuilding";
 import ICampus from "../campus-service/model/ICampus";
+import IUser from "../employee-service/model/IUser";
 
 export const apiLogin = async (email: string, password: string) => {
   try {
@@ -125,6 +126,10 @@ export const apiRegister = async (
     };
   }
 };
+
+export const addUser = (body: IUser) => {
+  return axiosConfig.post("employee-service/register", body);
+}
 
 /* Batch APIs */
 

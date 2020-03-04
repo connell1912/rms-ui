@@ -62,11 +62,11 @@
 }
 
 body {
-  /* font-family: 'Muli', ; */
-  /* background-color: lightgrey;
-  background-image: url("https://mms.businesswire.com/media/20191114005468/en/756709/23/Revature-Logo-%28002%29.jpg");
+  font-family: "Muli";
+  background-color: lightgrey;
+  background-image: url("./image-from-rawpixel-id-516730-jpeg.jpg");
   background-size: auto;
-  background-size: cover; */
+  background-size: cover;
 }
 
 .header {
@@ -76,7 +76,7 @@ body {
   left: 0px;
   top: 0px;
   position: absolute;
-  text-align:right
+  text-align: right;
 }
 
 #headerImage {

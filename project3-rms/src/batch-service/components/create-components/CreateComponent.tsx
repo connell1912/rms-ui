@@ -80,7 +80,7 @@ export const CreateComponent: React.FC<any> = (props: IBatchProps) => {
             </Col>
           </FormGroup>
           <FormGroup row>
-          <Label for="associates" sm={2}>
+            <Label for="associates" sm={2}>
               Associates
             </Label>
             <Col sm={10}>
@@ -105,7 +105,9 @@ export const CreateComponent: React.FC<any> = (props: IBatchProps) => {
                 id="curriculum"
                 onChange={val => setCurriculum(val.target.value)}
               >
-                <option selected disabled>Select A Curriculum</option>
+                <option selected disabled>
+                  Select A Curriculum
+                </option>
                 <option value={curriculumEnum.JAVA_MSA}>JAVA_MSA</option>
                 <option value={curriculumEnum.CSHARP}>CSHARP</option>
                 <option value={curriculumEnum.PEGA}>PEGA</option>

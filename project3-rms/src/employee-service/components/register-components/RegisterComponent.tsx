@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Form, FormGroup, Label, Col, Input, Button } from "reactstrap";
-import { apiRegister } from "../../../utility/api";
+import { addUser } from "../../../utility/api";
 import IUser, { rolesEnum } from "../../model/IUser";
 
 interface IRegisterProps {
@@ -30,7 +30,7 @@ export const RegisterComponent: React.FC<any> = (props: IRegisterProps) => {
               password: password,
               employeeId: 0,
               roles: roles
-            }).then(r => console.log(r.body))
+            }).then(r => console.log(r.data))
           }
         >
           <FormGroup row>

@@ -1,4 +1,3 @@
-
 import { loginTypes } from "../action-mappers/login-action";
 // import { IUser } from "../model/IUser";
 import { IUserState } from "../../utility";
@@ -26,7 +25,7 @@ export const loginReducer = (state = initialState, action: any) => {
         loginMessage: "You have Logged in"
       };
     }
-  /*   case loginTypes.LOGOUT: {
+    /*   case loginTypes.LOGOUT: {
       return {
         ...state,
         currentUser: null

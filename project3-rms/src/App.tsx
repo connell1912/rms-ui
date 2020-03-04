@@ -22,6 +22,7 @@ import { BuildingTableComponent } from "./campus-service/components/building-com
 import { AmenityTableComponent } from "./campus-service/components/amenity-components/amenity-display-components/AmenityTableComponent";
 import CreateAmenityComponent from "./campus-service/components/amenity-components/CreateAmenityContainer";
 import CreateBuildingComponent from "./campus-service/components/building-components/CreateBuildingContainer";
+import CreateCampusComponent from "./campus-service/components/campus-components/CreateCampusContainer";
 
 function App() {
   return (
@@ -45,11 +46,12 @@ function App() {
               <Route path="/workordertable" component={WorkOrderComponent} />
               <Route path="/addroom" component={SubmitRoom} />
               <Route path="/roomtable" component={RoomTableComponent} />
-              <Route path="/newamenity" component={CreateAmenityComponent}/>
-              <Route path="/amenities" component={AmenityTableComponent}/>
-              <Route path="/campustable" component={CampusComponent}/>
-              <Route path="/newbuilding" component={CreateBuildingComponent}/>
-              <Route path="/buildingtable" component={BuildingTableComponent}/>
+              <Route path="/newamenity" component={CreateAmenityComponent} />
+              <Route path="/amenities" component={AmenityTableComponent} />
+              <Route path="/addcampus" component={CreateCampusComponent} />
+              <Route path="/campustable" component={CampusComponent} />
+              <Route path="/newbuilding" component={CreateBuildingComponent} />
+              <Route path="/buildingtable" component={BuildingTableComponent} />
               <Route path="/" component={LoginComponent} />
             </Switch>
           </Router>
