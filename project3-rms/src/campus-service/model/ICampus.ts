@@ -1,4 +1,4 @@
-export interface ICampus{
+export default interface ICampus{
     campusId: number,
     name: string,
     abbrName: string,
@@ -7,6 +7,6 @@ export interface ICampus{
     stagingManagerId: number,
     hrLead: number,
     buildings: string,
-    corporateEmployees: number[],
+    corporateEmployees?: number[],
     // resourceMetaData:object
 }

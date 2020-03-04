@@ -85,7 +85,7 @@ export class CreateBuildingComponent extends React.Component<
     history.push("/buildingtable");
   };
 
-  return() {
+  render() {
     return (
       <>
         <div className="general">

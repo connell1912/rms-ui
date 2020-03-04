@@ -6,6 +6,7 @@ import { IRoom } from "../work-order-service/model/IRoom";
 import IAddress from "../campus-service/model/IAddress";
 import { IAmenity } from "../campus-service/model/IAmenity";
 import IBuilding from "../campus-service/model/IBuilding";
+import ICampus from "../campus-service/model/ICampus";
 
 export const apiLogin = async (email: string, password: string) => {
   try {
@@ -193,4 +194,8 @@ export const addBuilding = (body: IBuilding) => {
 
 export const getCampuses = () => {
   return axiosConfig.get("campus-service/campus/all");
+};
+
+export const addCampus = (body: ICampus) => {
+  return axiosConfig.post("campus-service/campus/new", body);
 };
