@@ -1,5 +1,5 @@
 import { IAmenity } from "../model/IAmenity";
-import { addAmenity } from "../utilities/api";
+import { addAmenity } from "../../utility/api";
 
 export const createAmenityTypes = {
     SUCCESSFUL_CREATE: "CREATE_SUCCESSFUL_CREATE",
@@ -24,4 +24,3 @@ export const createAmenity = (newAmenity: IAmenity) => async(dispatch: any) => {
         });
     }
 };
-

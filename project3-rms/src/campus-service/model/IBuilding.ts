@@ -1,11 +1,11 @@
 
-export interface IBuilding{
-    id:number,
+export interface IBuilding {
+    id?: number,
     name: string,
     abbrName: string,
-    physicalAddress: string,
+    physicalAddress: any,
     trainingLead: number,
-    amenities: any,
-    rooms: any,
-    resourceMetaData: any
+    amenities: any[],
+    rooms: any[],
+    // resourceMetadata: Object
 }

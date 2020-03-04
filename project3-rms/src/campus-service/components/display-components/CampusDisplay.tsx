@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import {Table, TableRow, TableCell} from '@material-ui/core';
 import { ICampus } from '../../model/ICampus';
 import Axios from 'axios';
-import { IBuilding } from '../../model/IBuilding';
+import {IBuilding} from '../../model/IBuilding';
 
 export interface ICampusTableProps{
     camp:ICampus

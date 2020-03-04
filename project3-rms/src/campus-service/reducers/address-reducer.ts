@@ -1,5 +1,5 @@
 import { createAddressTypes } from "../action-mappers/create-address-action";
-import { IAddressState, state } from "../../utility";
+import { IAddressState } from "../../utility";
 
 const initialState: IAddressState = {
   addAddress: null,
@@ -12,13 +12,13 @@ export const createAddressReducer = (state = initialState, action: any) => {
       return {
         ...state,
         addAddress: action.payload.addAddress,
-        createAddressMessage: "New address added"
+        createMessage: "New address added"
       };
     }
     case createAddressTypes.UNSUCCESSFUL_CREATE: {
       return {
         ...state,
-        createAddressMessage: action.payload.createAddressMessage
+        createMessage: action.payload.createMessage
       };
     }
     default:

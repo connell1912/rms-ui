@@ -4,6 +4,7 @@ import { loginReducer } from "../employee-service/reducers/login-reducer";
 import { createReducer } from "../batch-service/reducers/create-reducer";
 import { createAddressReducer } from "../campus-service/reducers/address-reducer";
 import { createAmenityReducer } from "../campus-service/reducers/amenity-reducer";
+import { createBuildingReducer } from "../campus-service/reducers/building-reducer";
 
 export interface IUserState {
   currentUser: any;
@@ -26,16 +27,22 @@ export interface IAddressState {
 }
 
 export interface IAmenityState {
-  addAmenity: any,
-  createAmenityMessage: string
+  addAmenity: any;
+  createAmenityMessage: string;
+}
+
+export interface IBuildingState {
+  addBuilding: any;
+  createBuildingMessage: string;
 }
 
 export interface IState {
   userState: IUserState;
   // registerState: IRegisterState;
-  batchState: IBatchState; 
+  batchState: IBatchState;
   addressState: IAddressState;
   amenityState: IAmenityState;
+  buildingState: IBuildingState;
 }
 
 export const state = combineReducers<IState>({
@@ -43,7 +50,6 @@ export const state = combineReducers<IState>({
   // registerState: registerReducer,
   batchState: createReducer,
   addressState: createAddressReducer,
-  amenityState: createAmenityReducer
+  amenityState: createAmenityReducer,
+  buildingState: createBuildingReducer
 });
-
-

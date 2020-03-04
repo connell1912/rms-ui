@@ -1,3 +1,4 @@
+
 export interface ICampus{
     campusId: number,
     name: string,

@@ -1,5 +1,5 @@
 import IAddress from "../model/IAddress";
-import { addAddress } from "../utilities/api";
+import { addAddress } from "../../utility/api";
 
 export const createAddressTypes = {
   SUCCESSFUL_CREATE: "CREATE_SUCCESSFUL_CREATE",
