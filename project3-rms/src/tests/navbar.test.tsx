@@ -1,7 +1,7 @@
 import React from "react";
 import Enzyme from "enzyme";
 import  Adapter from 'enzyme-adapter-react-16';
-import  NavBarComponent from "../employee-service/components/display-components/NavBarComponent";
+import  NavBarComponent from "../assets/display-components/NavBarComponent";
 const shallow = Enzyme.shallow;
 Enzyme.configure({adapter:new Adapter()})
 

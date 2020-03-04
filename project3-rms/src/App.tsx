@@ -1,5 +1,5 @@
 import React from "react";
-import HeaderImage from "./assets/Revature.png";
+import HeaderImage from "./assets/Revature_on_orange.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./assets/main.css";
 import { Provider } from "react-redux";
@@ -7,9 +7,10 @@ import { store } from "./Store";
 import { history } from "./utility/history";
 import { Router, Switch, Route } from "react-router";
 import LoginComponent from "./employee-service/components/login-components/LoginContainer";
-import RegisterComponent from "./employee-service/components/register-components/RegisterContainer";
-import { NavBarComponent } from "./employee-service/components/display-components/NavBarComponent";
+// import RegisterComponent from "./employee-service/components/register-components/RegisterContainer";
 import CreateComponent from "./batch-service/components/create-components/CreateContainer";
+import { NavBarComponent } from "./assets/display-components/NavBarComponent";
+import BatchTableComponent from "./batch-service/components/display-components/BatchTableComponent";
 
 function App() {
   return (
@@ -24,9 +25,10 @@ function App() {
               <NavBarComponent />
             </div>
             <Switch>
-              <Route path="/register" component={RegisterComponent} />
+              {/* <Route path="/register" component={RegisterComponent} /> */}
               <Route path="/createbatch" component={CreateComponent}/>
-              <Route path="/" component={LoginComponent} />
+              <Route path="/batchtable" component={BatchTableComponent}/>
+              <Route path="/login" component={LoginComponent} />
             </Switch>
           </Router>
         </Provider>
