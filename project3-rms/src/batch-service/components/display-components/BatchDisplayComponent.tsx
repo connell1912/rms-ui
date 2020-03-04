@@ -5,9 +5,7 @@ export interface IBatchProps {
   batch: IBatch;
 }
 
-export const BatchDisplayComponent: React.FC<any> = (
-  props: IBatchProps
-) => {
+export const BatchDisplayComponent: React.FC<any> = (props: IBatchProps) => {
   return (
     <>
       <tr>

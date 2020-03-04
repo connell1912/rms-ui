@@ -1,7 +1,7 @@
 import react, { Component } from "react";
 
 export class TableMap extends Component {
-  constructor(props:any) {
+  constructor(props: any) {
     super(props);
     this.state = {
       batchId: [],

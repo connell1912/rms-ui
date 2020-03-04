@@ -13,8 +13,7 @@ export const BatchTableComponent: React.FC<any> = (props: any) => {
 
   return (
     <div className="batchTable">
-
-      <MaterialTableDemo/>
+      <MaterialTableDemo />
       <Table striped>
         <thead>
           <tr>
