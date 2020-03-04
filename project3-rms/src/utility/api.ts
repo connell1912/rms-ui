@@ -6,7 +6,6 @@ import { IRoom } from "../work-order-service/model/IRoom";
 import IAddress from "../campus-service/model/IAddress";
 import { IAmenity } from "../campus-service/model/IAmenity";
 import IBuilding from "../campus-service/model/IBuilding";
-import IUser from "../employee-service/model/IUser";
 
 export const apiLogin = async (email: string, password: string) => {
   try {
@@ -29,38 +28,6 @@ export const apiLogin = async (email: string, password: string) => {
     } else {
       return {
         loginMessage: "Something Went Wrong",
-        body: null
-      };
-    }
-  } catch (e) {
-    console.log(e);
-    return {
-      loginMessage: "Something Went Wrong"
-    };
-  }
-};
-
-export const addUser = async (body: IUser) => {
-  try {
-    const response = await axiosConfig.post("addUser", {
-      body
-    });
-    if (response.status === 200) {
-      const body = await response.data;
-      console.log(body);
-
-      return {
-        body,
-        registerMessage: "Successful Register"
-      };
-    } else if (response.status === 401) {
-      return {
-        registerMessage: "Registration failed",
-        body: null
-      };
-    } else {
-      return {
-        registerMessage: "Something Went Wrong",
         body: null
       };
     }

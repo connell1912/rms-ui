@@ -1,130 +1,161 @@
-import React, { useState } from "react";
-import { Form, FormGroup, Label, Col, Input, Button } from "reactstrap";
-import { addUser } from "../../../utility/api";
-import IUser, { rolesEnum } from "../../model/IUser";
+import React, { SyntheticEvent } from "react";
+import { Link } from "react-router-dom";
+import { apiRegister } from "../../../utility/api";
 
-interface IRegisterProps {
-  addUser: (body: IUser) => void;
-  registerMessage: string;
+interface IRegisterState {
+  password: string;
+  firstName: string;
+  lastName: string;
+  email: string;
+  role: string;
+  department: string;
 }
 
-export const RegisterComponent: React.FC<any> = (props: IRegisterProps) => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [roles, setRoles] = useState(rolesEnum.ADMIN);
+interface IRegisterProps {
+  message: string;
+}
 
-  return (
-    <>
-      <div className="registerDiv">
-        <h2>Create an Account</h2>
-        <Form
-          className="loginForm"
-          onSubmit={() =>
-            addUser({
-              userId: 0,
-              firstName: firstName,
-              lastName: lastName,
-              email: email,
-              password: password,
-              employeeId: 0,
-              roles: roles
-            }).then(r => console.log(r.body))
-          }
-        >
-          <FormGroup row>
-            <Label for="email" sm={2}>
-              Email
-            </Label>
-            <Col sm={10}>
-              <Input
-                required
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Email"
-                onChange={val => setEmail(val.target.value)}
-              />
-              {/* <FormFeedback valid tooltip>Username is available!</FormFeedback>
-                <FormFeedback invalid tooltip>Username is unavailable, please select another.</FormFeedback> */}
-            </Col>
-          </FormGroup>
-          <FormGroup row>
-            <Label for="firstName" sm={2}>
-              First Name
-            </Label>
-            <Col sm={10}>
-              <Input
-                required
-                type="text"
-                name="firstName"
-                id="firstName"
-                placeholder="First Name"
-                onChange={val => setFirstName(val.target.value)}
-              />
-            </Col>
-          </FormGroup>
-          <FormGroup row>
-            <Label for="lastName" sm={2}>
-              Last Name
-            </Label>
-            <Col sm={10}>
-              <Input
-                required
-                type="text"
-                name="lastName"
-                id="lastName"
-                placeholder="Last Name"
-                onChange={val => setLastName(val.target.value)}
-              />
-            </Col>
-          </FormGroup>
-          <FormGroup row>
-            <Label for="password" sm={2}>
-              Password
-            </Label>
-            <Col sm={10}>
-              <Input
-                required
-                type="password"
-                name="password"
-                id="password"
-                placeholder="Password"
-                onChange={val => setPassword(val.target.value)}
-              />
-            </Col>
-          </FormGroup>
-          <FormGroup row>
-            <Label for="roles" sm={2}>
-              Role
-            </Label>
-            <Col sm={10}>
-              <Input
-                type="select"
-                name="select"
-                id="exampleSelect"
-                onChange={val => setRoles(val.target.valueAsNumber)}
-              >
-                <option selected disabled>
-                  Select a Role
-                </option>
-                <option value={0}>Training Manager</option>
-                <option value={1}>Building Manager</option>
-                <option value={2}>Trainer</option>
-                <option value={3}>Admin</option>
-              </Input>
-            </Col>
-          </FormGroup>
-          <Button color="btn btn-outline-secondary" type="submit">
-            Submit
-          </Button>
-        </Form>
-        <br />
-        <p>{props.registerMessage}</p>
+export class RegisterComponent extends React.Component<any, IRegisterState> {
+  constructor(props: any) {
+    super(props);
+    this.state = {
+      password: "",
+      firstName: "",
+      lastName: "",
+      email: "",
+      role: "",
+      department: ""
+    };
+  }
+
+  updateEmail = (event: any) => {
+    this.setState({
+      ...this.state,
+      email: event.target.value
+    });
+  };
+
+  updatePassword = (event: any) => {
+    this.setState({
+      ...this.state,
+      password: event.target.value
+    });
+  };
+  updateFirstName = (event: any) => {
+    this.setState({
+      ...this.state,
+      firstName: event.target.value
+    });
+  };
+  updateLastName = (event: any) => {
+    this.setState({
+      ...this.state,
+      lastName: event.target.value
+    });
+  };
+  updateRole = (event: any) => {
+    this.setState({
+      ...this.state,
+      role: event.target.value
+    });
+  };
+  updateDepartment = (event: any) => {
+    this.setState({
+      ...this.state,
+      role: event.target.value
+    });
+  };
+
+  register = async (event: SyntheticEvent) => {
+    event.preventDefault();
+    apiRegister(
+      this.state.password,
+      this.state.firstName,
+      this.state.lastName,
+      this.state.email,
+      this.state.role,
+      this.state.department
+    );
+    this.props.history.push("login");
+  };
+
+  render() {
+    return (
+      <div id="body">
+        <div className="signup">
+          <div>
+            <h1>Sign up</h1>
+            First Name:
+            <input
+              type="text"
+              placeholder="First Name"
+              className="txtb"
+              required
+              value={this.state.firstName}
+              onChange={this.updateFirstName}
+            />
+            Last Name:
+            <input
+              type="text"
+              placeholder="Last Name"
+              className="txtb"
+              required
+              value={this.state.lastName}
+              onChange={this.updateLastName}
+            />
+            Email:
+            <input
+              type="email"
+              placeholder="example@email.com"
+              className="txtb"
+              required
+              value={this.state.email}
+              onChange={this.updateEmail}
+            />
+            Password:
+            <input
+              type="password"
+              placeholder="Password"
+              className="txtb"
+              required
+              value={this.state.password}
+              onChange={this.updatePassword}
+            />
+            Department:
+            <select
+              className="txtb"
+              defaultValue="TRANING"
+              onChange={this.updateRole}
+            >
+              <option value="TRANING">Training</option>
+              <option value="STAGING">Staging</option>
+              <option value="QC">QC</option>
+              <option value="RETENTION">Retention</option>
+              <option value="HR">HR</option>
+            </select>
+            Role:
+            <select
+              className="txtb"
+              defaultValue="TRAINER"
+              onChange={this.updateRole}
+            >
+              <option value="TRAINER">Trainer</option>
+              <option value="TRNG_MNGR">Training Manager</option>
+              <option value="BLDG_MNGR">Building Manager</option>
+              <option value="LOCKED">Locked</option>
+            </select>
+            <input
+              type="submit"
+              value="Create Account"
+              className="signup-btn"
+              onClick={this.register}
+            />
+            <Link id="link" to="/login">
+              Sign in
+            </Link>
+          </div>
+        </div>
       </div>
-    </>
-  );
-};
-
-export default RegisterComponent;
+    );
+  }
+}

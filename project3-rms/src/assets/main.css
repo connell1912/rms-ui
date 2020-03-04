@@ -16,6 +16,24 @@
   border-radius: 20px;
 }
 
+.submitRoom {
+  background-color: #f8f9fa;
+  padding: 40px;
+  margin-top: 10%;
+  margin-left: 12.5%;
+  max-width: 75%;
+  border-radius: 20px;
+}
+
+.general {
+  background-color: #f8f9fa;
+  padding: 40px;
+  margin-top: 10%;
+  margin-left: 12.5%;
+  max-width: 75%;
+  border-radius: 20px;
+}
+
 .loginDiv {
   background-color: #f8f9fa;
   padding: 40px;
@@ -44,7 +62,7 @@
 }
 
 body {
-  font-family: 'Muli', ;
+  /* font-family: 'Muli', ; */
   /* background-color: lightgrey;
   background-image: url("https://mms.businesswire.com/media/20191114005468/en/756709/23/Revature-Logo-%28002%29.jpg");
   background-size: auto;
@@ -52,7 +70,7 @@ body {
 }
 
 .header {
-  height: 13%;
+  height: 10%;
   background-color: #f26900;
   width: 100%;
   left: 0px;
@@ -62,18 +80,19 @@ body {
 }
 
 #headerImage {
-  width: 15%;
+  width: 10%;
   height: auto;
   /* opacity: 85%; */
-  padding-right: 10px;
-  padding-top: 10px;
+  padding-right: 20px;
+  padding-top: 20px;
 }
 
 .footer {
-  height: 15%;
+  height: 150px;
   background-color: #494d56;
   width: 100%;
   bottom: 0px;
+  padding-bottom: 20px;
   position: absolute;
   color: white;
 }
