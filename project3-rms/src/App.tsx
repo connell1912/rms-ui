@@ -7,11 +7,14 @@ import { store } from "./Store";
 import { history } from "./utility/history";
 import { Router, Switch, Route } from "react-router";
 import LoginComponent from "./employee-service/components/login-components/LoginContainer";
-// import RegisterComponent from "./employee-service/components/register-components/RegisterContainer";
+import RegisterComponent from "./employee-service/components/register-components/RegisterComponent";
 import CreateComponent from "./batch-service/components/create-components/CreateContainer";
-import { NavBarComponent } from "./assets/display-components/NavBarComponent";
-import BatchTableComponent from "./batch-service/components/display-components/BatchTableComponent";
-import CampusComponent from "./campus-service/components/CampusContainer";
+import { AddressTableComponent } from "./campus-service/components/address-table/AddressTableComponent";
+import NavBarComponent from "./assets/display-components/NavBarComponent";
+import CreateAddressComponent from "./campus-service/components/create-address-table/CreateAddressContainer";
+import { AmenityTableComponent } from "./campus-service/components/amenity-table/AmenityTableComponent";
+import CreateAmenityComponent from "./campus-service/components/create-amenity-table/CreateAmenityContainer";
+
 function App() {
   return (
     <>
@@ -25,11 +28,13 @@ function App() {
               <NavBarComponent />
             </div>
             <Switch>
-              {/* <Route path="/register" component={RegisterComponent} /> */}
+              <Route path="/register" component={RegisterComponent} />
               <Route path="/createbatch" component={CreateComponent}/>
-              <Route path="/batchtable" component={BatchTableComponent}/>
-              <Route path="/login" component={LoginComponent} />
-              <Route path="/camp" component={CampusComponent}/>
+              <Route path="/addresses" component={AddressTableComponent}/>
+              <Route path="/newaddress" component={CreateAddressComponent}/>
+              <Route path="/amenities" component={AmenityTableComponent}/>
+              <Route path="/newamneity" component={CreateAmenityComponent}/>
+              <Route path="/" component={LoginComponent} />
             </Switch>
           </Router>
         </Provider>

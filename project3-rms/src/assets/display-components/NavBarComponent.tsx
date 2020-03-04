@@ -34,6 +34,12 @@ export const NavBarComponent = (props: any) => {
             <NavItem>
               <NavLink href="/register">Register</NavLink>
             </NavItem>
+            <NavItem>
+              <NavLink href="/addresses">Address</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/newaddress">Add Address</NavLink>
+            </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle className="dropdown-menu-right" nav caret>
                 {/* {updateCurrentUser} */}

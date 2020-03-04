@@ -159,3 +159,4 @@ export class RegisterComponent extends React.Component<any, IRegisterState> {
     );
   }
 }
+export default RegisterComponent;
