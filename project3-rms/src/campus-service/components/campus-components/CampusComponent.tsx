@@ -1,7 +1,7 @@
 import React, { useState, useEffect} from 'react';
 import {Table, TableRow, TableHead, TableContainer, TableCell, TableBody } from '@material-ui/core';
-import {CampusDisplayTable} from './campus-display-components/CampusDisplay';
-import { ICampus } from '../../model/ICampus';
+import {CampusTableDisplay} from './campus-display-components/CampusTableDisplay';
+import ICampus from '../../model/ICampus';
 import { getCampuses } from '../../../utility/api';
 
 export const CampusComponent:React.FC<any> = (props:any) =>{
@@ -33,7 +33,7 @@ export const CampusComponent:React.FC<any> = (props:any) =>{
             </TableRow>
             </TableHead>
             <TableBody>
-                {campusList.map((r:ICampus) => <CampusDisplayTable campus={r}/>)}
+                {campusList.map((r:ICampus) => <CampusTableDisplay campus={r}/>)}
             </TableBody>
             {/* <tbody>
                 {campList.map((r:ICampus) => <CampusDisplayTable camp={r}/>)}

@@ -19,9 +19,9 @@ export const NavBarComponent = (props: any) => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <div>
+    <div className="navbarcomponent">
       <Navbar color="" light expand="md" style={{ backgroundColor: "#f26900" }}>
-        <NavbarBrand href="/">Resource Management System</NavbarBrand>
+        <NavbarBrand className="logoIMG" href="/">Resource Management System</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
@@ -68,13 +68,15 @@ export const NavBarComponent = (props: any) => {
                 </DropdownItem>
                 <DropdownItem divider />
                 <DropdownItem header>Campuses</DropdownItem>
+<<<<<<< HEAD
                 <DropdownItem href="/addCampus">Add Campuses</DropdownItem>
+=======
+                <DropdownItem href="/addcampus">Add Campus</DropdownItem>
+>>>>>>> 3e9ef59212dde85d49767538db809644dcf98fd1
                 <DropdownItem href="/campustable">View Campuses</DropdownItem>
                 <DropdownItem divider />
                 <DropdownItem header>Buildings</DropdownItem>
-                <DropdownItem href="/newbuilding">
-                  Add Building
-                </DropdownItem>
+                <DropdownItem href="/newbuilding">Add Building</DropdownItem>
                 <DropdownItem href="/buildingtable">
                   View Buildings
                 </DropdownItem>

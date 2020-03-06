@@ -9,7 +9,7 @@ import {
   Button
 } from "reactstrap";
 import { addCampus } from "../../../utility/api";
-import { ICampus } from "../../model/ICampus";
+import  ICampus  from "../../model/ICampus";
 
 interface ICampusProps {
   addCampus: (body: ICampus) => void;

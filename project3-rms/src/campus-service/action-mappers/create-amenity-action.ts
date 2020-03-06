@@ -2,8 +2,8 @@ import { IAmenity } from "../model/IAmenity";
 import { addAmenity } from "../../utility/api";
 
 export const createAmenityTypes = {
-    SUCCESSFUL_CREATE: "CREATE_SUCCESSFUL_CREATE",
-    UNSUCCESSFUL_CREATE: "CREATE_UNSUCCESSFUL_CREATE"
+  SUCCESSFUL_CREATE: "CREATE_SUCCESSFUL_CREATE",
+  UNSUCCESSFUL_CREATE: "CREATE_UNSUCCESSFUL_CREATE"
 };
 
 export const createAmenity = (newAmenity: IAmenity) => async(dispatch: any) => {
