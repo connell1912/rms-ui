@@ -68,6 +68,7 @@ export const NavBarComponent = (props: any) => {
                 </DropdownItem>
                 <DropdownItem divider />
                 <DropdownItem header>Campuses</DropdownItem>
+                <DropdownItem href="/addCampus">Add Campuses</DropdownItem>
                 <DropdownItem href="/campustable">View Campuses</DropdownItem>
                 <DropdownItem divider />
                 <DropdownItem header>Buildings</DropdownItem>

@@ -22,7 +22,7 @@ import { BuildingTableComponent } from "./campus-service/components/building-com
 import { AmenityTableComponent } from "./campus-service/components/amenity-components/amenity-display-components/AmenityTableComponent";
 import CreateAmenityComponent from "./campus-service/components/amenity-components/CreateAmenityContainer";
 import CreateBuildingComponent from "./campus-service/components/building-components/CreateBuildingContainer";
-
+import CreateCampusComponent from "./campus-service/components/create-campus-table/CreateCampusContainter";
 function App() {
   return (
     <>
@@ -48,6 +48,7 @@ function App() {
               <Route path="/newamenity" component={CreateAmenityComponent}/>
               <Route path="/amenities" component={AmenityTableComponent}/>
               <Route path="/campustable" component={CampusComponent}/>
+              <Route path="/addCampus" component={CreateCampusComponent}/>
               <Route path="/newbuilding" component={CreateBuildingComponent}/>
               <Route path="/buildingtable" component={BuildingTableComponent}/>
               <Route path="/" component={LoginComponent} />

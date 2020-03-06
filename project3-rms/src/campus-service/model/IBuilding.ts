@@ -1,5 +1,5 @@
 
-export interface IBuilding {
+export default interface IBuilding {
     id?: number,
     name: string,
     abbrName: string,

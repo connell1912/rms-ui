@@ -6,6 +6,7 @@ import { IRoom } from "../work-order-service/model/IRoom";
 import IAddress from "../campus-service/model/IAddress";
 import { IAmenity } from "../campus-service/model/IAmenity";
 import IBuilding from "../campus-service/model/IBuilding";
+import { ICampus } from "../campus-service/model/ICampus";
 
 export const apiLogin = async (email: string, password: string) => {
   try {
@@ -56,7 +57,7 @@ export const apiRegister = async (
     department
   };
   try {
-    const response = await axios.post("http://localhost:8080/employee/save", {
+    const response = await axios.post("employee/save", {
       password: password,
       firstName: firstName,
       lastName: lastName,
@@ -68,8 +69,8 @@ export const apiRegister = async (
       const body = await response.data;
       if (body["role"] === "ADMIN") {
         try {
-          const response2 = await axios.post(
-            "http://localhost:8080/employee/register/customer",
+          const response2 = await axiosConfig.post(
+            "employee/register/customer",
             {
               id: body["id"],
               password: body["password"],
@@ -194,3 +195,6 @@ export const addBuilding = (body: IBuilding) => {
 export const getCampuses = () => {
   return axiosConfig.get("campus-service/campus/all");
 };
+export const addCampus = (body:ICampus) => {
+  return axiosConfig.post("campus-service/campus/new", body);
+}

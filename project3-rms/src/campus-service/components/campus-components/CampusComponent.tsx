@@ -1,6 +1,6 @@
 import React, { useState, useEffect} from 'react';
 import {Table, TableRow, TableHead, TableContainer, TableCell, TableBody } from '@material-ui/core';
-import {CampusDisplayTable} from '../campus-components/campus-display-components/CampusDisplay';
+import {CampusDisplayTable} from './campus-display-components/CampusDisplay';
 import { ICampus } from '../../model/ICampus';
 import { getCampuses } from '../../../utility/api';
 
