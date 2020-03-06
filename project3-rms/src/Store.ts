@@ -1,6 +1,6 @@
 import logger from "redux-logger";
 import reduxThunk from "redux-thunk";
-import { state } from "./employee-service/reducers";
+import { state } from "./utility";
 import { applyMiddleware, Store, createStore, compose } from "redux";
 
 const saveToLocalStorage = (state: any) => {

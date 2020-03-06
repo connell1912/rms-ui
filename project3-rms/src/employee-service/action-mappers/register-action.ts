@@ -1,25 +1,38 @@
-import IUser from "../model/IUser";
-import { addUser } from "../../utility/api";
+import { apiRegister } from "../../utility/api";
 
 export const registerTypes = {
-  SUCCESSFUL_REGISTER: "REGISTER_SUCCESSFUL_REGISTER",
-  UNSUCCESSFUL_REGISTER: "REGISTER_UNSUCCESSFUL_REGISTER"
+  SUCCESSFUL_REGISTRATION: "REGISTRATION_SUCCESSFUL_REGISTRATION",
+  UNSUCCESSFUL_REGISTRATION: "REGISTRATION_UNSUCCESSFUL_REGISTRATION"
 };
 
-export const registerUser = (newUser: IUser) => async (dispatch: any) => {
-  let response: any = await addUser(newUser);
+export const registerUser = (
+  password: string,
+  firstName: string,
+  lastName: string,
+  email: string,
+  role: string,
+  department: string
+) => async (dispatch: any) => {
+  let response: any = await apiRegister(
+    password,
+    firstName,
+    lastName,
+    email,
+    role,
+    department
+  );
   if (response.body) {
     dispatch({
-      type: registerTypes.SUCCESSFUL_REGISTER,
+      type: registerTypes.SUCCESSFUL_REGISTRATION,
       payload: {
-        currentUser: response.body
+        message: response.message
       }
     });
   } else {
     dispatch({
-      type: registerTypes.UNSUCCESSFUL_REGISTER,
+      type: registerTypes.UNSUCCESSFUL_REGISTRATION,
       payload: {
-        registerMessage: response.registerMessage
+        message: response.message
       }
     });
   }

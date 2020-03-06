@@ -1,4 +1,4 @@
-import { IRegisterState } from ".";
+import { IRegisterState } from "../../utility";
 import { registerTypes } from "../action-mappers/register-action";
 
 const initialState: IRegisterState = {
@@ -8,14 +8,14 @@ const initialState: IRegisterState = {
 
 export const registerReducer = (state = initialState, action: any) => {
   switch (action.type) {
-    case registerTypes.SUCCESSFUL_REGISTER: {
+    case registerTypes.SUCCESSFUL_REGISTRATION: {
       return {
         ...state,
         newUser: action.payload.newUser,
         registerMessage: "You have Created New User"
       };
     }
-    case registerTypes.UNSUCCESSFUL_REGISTER: {
+    case registerTypes.UNSUCCESSFUL_REGISTRATION: {
       return {
         ...state,
         registerMessage: action.payload.registerMessage
