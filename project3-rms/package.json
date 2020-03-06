@@ -40,7 +40,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "sonar-scanner": "node_modules/sonar-scanner/bin/sonar-scanner"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -61,6 +62,15 @@
     "@types/enzyme-adapter-react-16": "^1.0.6",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
-    "raf": "^3.4.1"
+    "jest-sonar-reporter": "^2.0.0",
+    "raf": "^3.4.1",
+    "sonar-scanner": "^3.1.0"
+  },
+  "jest": {
+      "testResultsProcessor": "jest-sonar-reporter"
   }
+  
+
+
+
 }
