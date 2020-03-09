@@ -34,11 +34,14 @@ export const NavBarComponent = (props: any) => {
             <NavItem>
               <NavLink href="/register">Register</NavLink>
             </NavItem>
+  
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle className="dropdown-menu-right" nav caret>
                 {/* {updateCurrentUser} */}
+                Menu
               </DropdownToggle>
               <DropdownMenu right>
+                
                 <DropdownItem header>Batches</DropdownItem>
                 <DropdownItem href="/createbatch">Add Batch</DropdownItem>
                 <DropdownItem href="/batchtable">View Batches</DropdownItem>
@@ -62,9 +65,11 @@ export const NavBarComponent = (props: any) => {
                 </DropdownItem>
                 <DropdownItem divider />
                 <DropdownItem header>Campuses</DropdownItem>
+                <DropdownItem href="/addcampus">Add Campus</DropdownItem>
                 <DropdownItem href="/campustable">View Campuses</DropdownItem>
                 <DropdownItem divider />
                 <DropdownItem header>Buildings</DropdownItem>
+                <DropdownItem href="/newbuilding">Add Building</DropdownItem>
                 <DropdownItem href="/buildingtable">
                   View Buildings
                 </DropdownItem>

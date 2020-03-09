@@ -1,8 +1,8 @@
-import React from 'react';
-import { IRoom } from '../../model/IRoom';
+import React from "react";
+import { IRoom } from "../../model/IRoom";
 
 export interface IRR {
-    room: IRoom
+  room: IRoom;
 }
 
 export const RoomTableDisplay:React.FC<IRR> = (props:IRR) => {

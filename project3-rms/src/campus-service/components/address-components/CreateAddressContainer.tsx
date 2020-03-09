@@ -4,13 +4,16 @@ import { createAddress } from "../../action-mappers/create-address-action";
 import { CreateAddressComponent } from "../address-components/CreateAddressComponent";
 
 export const mapStateToProps = (state: IState) => {
-    return{
-        createMessage: state.addressState.createAddressMessage
-    };
+  return {
+    createMessage: state.addressState.createAddressMessage
+  };
 };
 
 const mapDispatchToProps = {
-    createAddress
+  createAddress
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(CreateAddressComponent);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(CreateAddressComponent);

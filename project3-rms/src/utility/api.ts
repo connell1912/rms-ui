@@ -5,6 +5,9 @@ import { IWorkOrder } from "../work-order-service/model/IWorkOrder";
 import { IRoom } from "../work-order-service/model/IRoom";
 import IAddress from "../campus-service/model/IAddress";
 import { IAmenity } from "../campus-service/model/IAmenity";
+import IBuilding from "../campus-service/model/IBuilding";
+import ICampus from "../campus-service/model/ICampus";
+import IUser from "../employee-service/model/IUser";
 
 export const apiLogin = async (email: string, password: string) => {
   try {
@@ -55,7 +58,7 @@ export const apiRegister = async (
     department
   };
   try {
-    const response = await axios.post("http://localhost:8080/employee/save", {
+    const response = await axios.post("employee/save", {
       password: password,
       firstName: firstName,
       lastName: lastName,
@@ -67,8 +70,8 @@ export const apiRegister = async (
       const body = await response.data;
       if (body["role"] === "ADMIN") {
         try {
-          const response2 = await axios.post(
-            "http://localhost:8080/employee/register/customer",
+          const response2 = await axiosConfig.post(
+            "employee/register/customer",
             {
               id: body["id"],
               password: body["password"],
@@ -124,6 +127,10 @@ export const apiRegister = async (
   }
 };
 
+export const addUser = (body: IUser) => {
+  return axiosConfig.post("employee-service/register", body);
+}
+
 /* Batch APIs */
 
 export const addBatch = (body: IBatch) => {
@@ -136,56 +143,64 @@ export const getBatch = () => {
 
 export const deleteBatch = () => {
   return axiosConfig.get("batch-service/batch/delete");
-}
+};
 
 /* Work Order APIs */
 
 export const getWOList = () => {
   return axiosConfig.get("work-order-service/workorder/all");
-}
+};
 
 export const publishWorkOrder = (body: IWorkOrder) => {
   return axiosConfig.post("work-order-service/workorder/newworkorder", body);
-}
+};
 
 /* Room APIs */
 
 export const getRooms = () => {
   return axiosConfig.get("campus-service/room/all");
-}
+};
 
 export const publishRoom = (body: IRoom) => {
   return axiosConfig.post("campus-service/room/new", body);
-}
+};
 
 /* Address APIs */
 
 export const getAddresses = () => {
   return axiosConfig.get("campus-service/address/all");
-}
+};
 
-export const addAddress = (body:IAddress) => {
+export const addAddress = (body: IAddress) => {
   return axiosConfig.post("campus-service/address/new", body);
-}
+};
 
 /* Amenity APIs */
 
 export const getAmenities = () => {
   return axiosConfig.get("campus-service/amenity/all");
-}
+};
 
 export const addAmenity = (body: IAmenity) => {
   return axiosConfig.post("campus-service/amenity/new", body);
-}
+};
 
 /* Building APIs */
 
 export const getBuildings = () => {
-  return axiosConfig.get("campus-service/building/all")
-}
+  return axiosConfig.get("campus-service/building/all");
+};
+
+export const addBuilding = (body: IBuilding) => {
+  return axiosConfig.post("campus-service/building/new", body);
+};
 
 /* Campus APIs */
 
 export const getCampuses = () => {
   return axiosConfig.get("campus-service/campus/all");
-}
+};
+
+export const addCampus = (body: ICampus) => {
+  return axiosConfig.post("campus-service/campus/new", body);
+};
