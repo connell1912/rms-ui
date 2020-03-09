@@ -123,14 +123,8 @@ export const RegisterComponent: React.FC<any> = (props: IRegisterProps) => {
         <br />
         <p>{props.registerMessage}</p>
       </div>
-<<<<<<< HEAD
-    );
-  }
-}
-=======
     </>
   );
 };
 
->>>>>>> 3e9ef59212dde85d49767538db809644dcf98fd1
 export default RegisterComponent;

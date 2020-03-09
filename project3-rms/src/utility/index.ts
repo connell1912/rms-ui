@@ -5,11 +5,7 @@ import { createReducer } from "../batch-service/reducers/create-reducer";
 import { createAddressReducer } from "../campus-service/reducers/address-reducer";
 import { createAmenityReducer } from "../campus-service/reducers/amenity-reducer";
 import { createBuildingReducer } from "../campus-service/reducers/building-reducer";
-<<<<<<< HEAD
-import {createCampusReducer} from "../campus-service/reducers/campus-reducer";
-=======
 import { createCampusReducer } from "../campus-service/reducers/campus-reducer";
->>>>>>> 3e9ef59212dde85d49767538db809644dcf98fd1
 
 export interface IUserState {
   currentUser: any;
@@ -53,11 +49,7 @@ export interface IState {
   addressState: IAddressState;
   amenityState: IAmenityState;
   buildingState: IBuildingState;
-<<<<<<< HEAD
-  campusState:ICampusState;
-=======
   campusState: ICampusState;
->>>>>>> 3e9ef59212dde85d49767538db809644dcf98fd1
 }
 
 export const state = combineReducers<IState>({

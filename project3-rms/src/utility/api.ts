@@ -6,12 +6,8 @@ import { IRoom } from "../work-order-service/model/IRoom";
 import IAddress from "../campus-service/model/IAddress";
 import { IAmenity } from "../campus-service/model/IAmenity";
 import IBuilding from "../campus-service/model/IBuilding";
-<<<<<<< HEAD
-import { ICampus } from "../campus-service/model/ICampus";
-=======
 import ICampus from "../campus-service/model/ICampus";
 import IUser from "../employee-service/model/IUser";
->>>>>>> 3e9ef59212dde85d49767538db809644dcf98fd1
 
 export const apiLogin = async (email: string, password: string) => {
   try {
@@ -204,13 +200,7 @@ export const addBuilding = (body: IBuilding) => {
 export const getCampuses = () => {
   return axiosConfig.get("campus-service/campus/all");
 };
-<<<<<<< HEAD
-export const addCampus = (body:ICampus) => {
-  return axiosConfig.post("campus-service/campus/new", body);
-}
-=======
 
 export const addCampus = (body: ICampus) => {
   return axiosConfig.post("campus-service/campus/new", body);
 };
->>>>>>> 3e9ef59212dde85d49767538db809644dcf98fd1

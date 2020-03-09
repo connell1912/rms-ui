@@ -37,13 +37,11 @@
     "typescript": "^3.7.5"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "sonar-scanner": "node_modules/sonar-scanner/bin/sonar-scanner",
     "start": "webpack",
-    "test": "jest --coverage --coverageDirectory=output/coverage/jest"
+    "build": "react-scripts build",
+    "test": "jest --coverage --coverageDirectory=output/coverage/jest",
+    "eject": "react-scripts eject",
+    "sonar-scanner": "node_modules/sonar-scanner/bin/sonar-scanner"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -69,7 +67,8 @@
     "jest-junit": "^3.7.0",
     "jest-sonar-reporter": "^2.0.0",
     "raf": "^3.4.1",
-    "sonar-scanner": "^3.1.0"
+    "sonar-scanner": "^3.1.0",
+    "webpack-cli": "^3.3.11"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -89,10 +88,5 @@
   "jest-junit": {
     "output": "output/coverage/junit/junit.xml",
     "usePathForSuiteName": "true"
-  }  
-  
-    
-  
-
-
+  }
 }
