@@ -42,7 +42,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "sonar-scanner": "node_modules/sonar-scanner/bin/sonar-scanner"
+    "sonar-scanner": "node_modules/sonar-scanner/bin/sonar-scanner",
+    "start": "webpack",
+    "test": "jest --coverage --coverageDirectory=output/coverage/jest"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -79,9 +81,19 @@
     "coverageReporters": [
       "lcov",
       "text"
+    ],
+    "reporters": [
+      "default",
+      "jest-junit"
     ]
   },
   "jest-junit": {
-    "output": "test-results/test-report.junit.xml"
-  }
+    "output": "output/coverage/junit/junit.xml",
+    "usePathForSuiteName": "true"
+  }  
+  
+    
+  
+
+
 }
