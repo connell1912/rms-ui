@@ -1,0 +1,115 @@
+/* . is for className, # is for id */
+
+.mainPage {
+  text-align: center;
+  margin-top: 0%;
+  border: none;
+  border-radius: 20px;
+}
+
+.registerDiv {
+  background-color: #f8f9fa;
+  padding: 40px;
+  margin-top: 10%;
+  margin-left: 12.5%;
+  max-width: 75%;
+  border-radius: 20px;
+}
+
+.submitRoom {
+  background-color: #f8f9fa;
+  padding: 40px;
+  margin-top: 10%;
+  margin-left: 12.5%;
+  max-width: 75%;
+  border-radius: 20px;
+}
+
+.general {
+  background-color: #f8f9fa;
+  padding: 40px;
+  margin-top: 10%;
+  margin-left: 12.5%;
+  max-width: 75%;
+  border-radius: 20px;
+}
+
+.loginDiv {
+  background-color: #f8f9fa;
+  padding: 40px;
+  margin-top: 10%;
+  margin-left: 12.5%;
+  max-width: 75%;
+  border-radius: 20px;
+}
+
+.batchTable {
+  background-color: #f8f9fa;
+  padding: 40px;
+  margin-top: 10%;
+  margin-left: 12.5%;
+  max-width: 75%;
+  border-radius: 20px;
+}
+
+.createBatchDiv {
+  background-color: #f8f9fa;
+  padding: 40px;
+  margin-top: 10%;
+  margin-left: 12.5%;
+  max-width: 75%;
+  border-radius: 20px;
+}
+
+body {
+  font-family: "Muli";
+  background-color: lightgrey;
+  background-image: url("./image-from-rawpixel-id-516730-jpeg.jpg");
+  background-size: auto;
+  background-size: cover;
+}
+
+.header {
+  height: 10%;
+  background-color: #f26900;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  text-align: right;
+}
+
+#headerImage {
+  width: 10%;
+  height: auto;
+  /* opacity: 85%; */
+  padding-right: 20px;
+  padding-top: 20px;
+}
+
+.footer {
+  height: 150px;
+  background-color: #494d56;
+  width: 100%;
+  bottom: 0px;
+  padding-bottom: 20px;
+  position: absolute;
+  color: white;
+}
+
+.enterButton {
+  position: absolute;
+  top: 70%;
+  left: 46%;
+}
+
+#footerText {
+  /* position: relative;
+  align-content: center; */
+  top: 0px;
+}
+
+.dropdown-menu-right {
+  right: 0;
+  left: auto;
+}
