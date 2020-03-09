@@ -12,15 +12,8 @@ export const CreateComponent: React.FC<any> = (props: IBatchProps) => {
   const [batchName, setBatchName] = useState("");
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
-<<<<<<< HEAD
-  //   const [trainerId, setTrainerId] = useState();
-  //   const [coTrainerId, setCoTrainerId] = useState();
-  const [associates, setAssociates] = useState();
-  const [curriculum, setCurriculum] = useState();
-=======
   const [associates, setAssociates] = useState("");
   const [curriculum, setCurriculum] = useState("");
->>>>>>> ac44fb912043e2338b24e23cf49ac171587dfe14
 
   return (
     <>
