@@ -34,11 +34,14 @@ export const NavBarComponent = (props: any) => {
             <NavItem>
               <NavLink href="/register">Register</NavLink>
             </NavItem>
+  
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle className="dropdown-menu-right" nav caret>
                 {/* {updateCurrentUser} */}
+                Menu
               </DropdownToggle>
               <DropdownMenu right>
+                
                 <DropdownItem header>Batches</DropdownItem>
                 <DropdownItem href="/createbatch">Add Batch</DropdownItem>
                 <DropdownItem href="/batchtable">View Batches</DropdownItem>

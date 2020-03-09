@@ -58,7 +58,7 @@ export const apiRegister = async (
     department
   };
   try {
-    const response = await axios.post("http://localhost:8080/employee/save", {
+    const response = await axios.post("employee/save", {
       password: password,
       firstName: firstName,
       lastName: lastName,
@@ -70,8 +70,8 @@ export const apiRegister = async (
       const body = await response.data;
       if (body["role"] === "ADMIN") {
         try {
-          const response2 = await axios.post(
-            "http://localhost:8080/employee/register/customer",
+          const response2 = await axiosConfig.post(
+            "employee/register/customer",
             {
               id: body["id"],
               password: body["password"],
