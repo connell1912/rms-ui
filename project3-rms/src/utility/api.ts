@@ -7,7 +7,7 @@ import IAddress from "../campus-service/model/IAddress";
 import { IAmenity } from "../campus-service/model/IAmenity";
 import IBuilding from "../campus-service/model/IBuilding";
 import ICampus from "../campus-service/model/ICampus";
-import IUser from "../employee-service/model/IUser";
+import { IUser } from '../employee-service/model/IUser';
 
 export const apiLogin = async (email: string, password: string) => {
   try {
@@ -41,94 +41,8 @@ export const apiLogin = async (email: string, password: string) => {
   }
 };
 
-export const apiRegister = async (
-  password: string,
-  firstName: string,
-  lastName: string,
-  email: string,
-  role: string,
-  department: string
-): Promise<object> => {
-  let user = {
-    password,
-    firstName,
-    lastName,
-    email,
-    role,
-    department
-  };
-  try {
-    const response = await axios.post("employee/save", {
-      password: password,
-      firstName: firstName,
-      lastName: lastName,
-      email: email,
-      role: role,
-      department: department
-    });
-    if (response.status === 200) {
-      const body = await response.data;
-      if (body["role"] === "ADMIN") {
-        try {
-          const response2 = await axiosConfig.post(
-            "employee/register/customer",
-            {
-              id: body["id"],
-              password: body["password"],
-              firstName: body["firstName"],
-              lastName: body["lastName"],
-              email: body["email"],
-              role: body["role"],
-              department: body["department"]
-            }
-          );
-          if (response2.status === 200) {
-            console.log("Customer created Successfully!");
-          } else if (response2.status === 500) {
-            return {
-              message: "Failed to register you!",
-              body: null
-            };
-          } else {
-            return {
-              message: "Something Went Wrong",
-              body: null
-            };
-          }
-        } catch (e) {
-          console.log(e);
-          return {
-            registerMessage: "Something Went Wrong"
-          };
-        }
-      }
-
-      return {
-        body,
-        message: "You have been registered!"
-      };
-    } else if (response.status === 500) {
-      return {
-        message: "Failed to register you!",
-        body: null
-      };
-    } else {
-      return {
-        message: "Something Went Wrong",
-        body: null
-      };
-    }
-  } catch (e) {
-    console.log(user);
-    console.log(e);
-    return {
-      registerMessage: "Something Went Wrong"
-    };
-  }
-};
-
 export const addUser = (body: IUser) => {
-  return axiosConfig.post("employee-service/register", body);
+  return axiosConfig.post("employee-service/employee/new", body);
 }
 
 /* Batch APIs */

@@ -1,5 +1,5 @@
-import { apiLogin } from "../../utility/api";
-import { history } from "../../utility/history"
+import { apiLogin } from '../../utility/api';
+import { history } from "../../utility/history";
 
 export const loginTypes = {
   SUCCESSFUL_LOGIN: "LOGIN_SUCCESSFUL_LOGIN",
@@ -7,9 +7,10 @@ export const loginTypes = {
   LOGOUT: "LOGOUT"
 };
 
-export const updateCurrentUser = (email: string, password: string) => async (
-  dispatch: any
-) => {
+export const updateCurrentUser = (
+  email: string,
+  password: string
+) => async (dispatch: any) => {
   let response: any = await apiLogin(email, password);
   console.log(response);
   if (response.body) {

@@ -7,7 +7,7 @@ import { store } from "./Store";
 import { history } from "./utility/history";
 import { Router, Switch, Route } from "react-router";
 import LoginComponent from "./employee-service/components/login-components/LoginContainer";
-import RegisterComponent from "./employee-service/components/register-components/RegisterContainer";
+import { RegisterComponent } from "./employee-service/components/register-component/RegisterComponent";
 import CreateComponent from "./batch-service/components/create-components/CreateContainer";
 import { NavBarComponent } from "./assets/display-components/NavBarComponent";
 import BatchTableComponent from "./batch-service/components/display-components/BatchTableComponent";
