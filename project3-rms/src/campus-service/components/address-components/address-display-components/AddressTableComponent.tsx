@@ -11,7 +11,7 @@ export const AddressTableComponent: React.FC<any> = (props: any) => {
   }, [addressList.length]);
 
   return (
-    <div className="general">
+    <div className="table">
       <Table bordered>
         <thead>
           <tr>

@@ -12,7 +12,7 @@ export const RoomTableComponent: React.FC<any> = (props: any) => {
   }, [roomList.length]);
 
   return (
-    <div className="general">
+    <div className="table">
       <Table striped>
         <thead>
           <tr>

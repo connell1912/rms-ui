@@ -19,7 +19,7 @@ export const CampusTableComponent: React.FC<any> = (props: any) => {
 
   return (
     <>
-      <div className="general">
+      <div className="table">
         <TableContainer>
           <Table>
             <TableHead>

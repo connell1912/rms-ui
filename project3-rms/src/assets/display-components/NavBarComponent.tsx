@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import HeaderImage from "./assets/Revature_on_orange.png";
+// import HeaderImage from "./assets/Revature_on_orange.png";
 import {
   Collapse,
   Navbar,

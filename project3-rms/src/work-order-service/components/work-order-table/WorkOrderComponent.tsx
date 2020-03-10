@@ -12,7 +12,7 @@ export const WorkOrderComponent: React.FC<any> = (props: any) => {
   }, [workOrderList.length]);
 
   return (
-    <div className="general">
+    <div className="table">
       {/* <Card>
                 {workOrderList.map((r:IWorkOrder) => <WorkOrderDisplay wo={r}/>)}
             </Card> */}
