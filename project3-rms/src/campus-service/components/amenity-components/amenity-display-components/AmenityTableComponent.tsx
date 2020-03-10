@@ -12,7 +12,7 @@ export const AmenityTableComponent: React.FC<any> = (props: any) => {
 
   return (
     <div className="table">
-      <Table bordered>
+      <Table striped>
         <thead>
           <tr>
             <th>ID</th>

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { getBatch } from "../../../utility/api";
-import { Table } from "reactstrap";
-import IBatch from "../../model/IBatch";
-import { BatchDisplayComponent } from "./BatchDisplayComponent";
-// import TableComponent from "../../../assets/display-components/TableComponent";
+// import { Table } from "reactstrap";
+// import IBatch from "../../model/IBatch";
+// import { BatchDisplayComponent } from "./BatchDisplayComponent";
+import TableComponent from "../../../assets/display-components/TableComponent";
 
 export const BatchTableComponent: React.FC<any> = (props: any) => {
   const [batchList, setBatchList] = useState([]);
@@ -13,8 +13,8 @@ export const BatchTableComponent: React.FC<any> = (props: any) => {
 
   return (
     <div className="table">
-      {/* <MaterialTableDemo /> */}
-      <Table striped>
+      <TableComponent />
+      {/* <Table striped>
         <thead>
           <tr>
             <th>Batch ID</th>
@@ -32,7 +32,7 @@ export const BatchTableComponent: React.FC<any> = (props: any) => {
             <BatchDisplayComponent batch={r} />
           ))}
         </tbody>
-      </Table>
+      </Table> */}
     </div>
   );
 };

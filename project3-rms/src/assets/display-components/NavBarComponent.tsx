@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import HeaderImage from "./assets/Revature_on_orange.png";
+import HeaderImage from "../../assets/Revature_on_orange.png";
 import {
   Collapse,
   Navbar,
@@ -11,8 +11,13 @@ import {
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
-  DropdownItem
+  DropdownItem,
+  Form,
+  Input,
+  Button,
+  FormGroup
 } from "reactstrap";
+
 
 export const NavBarComponent = (props: any) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,7 +27,9 @@ export const NavBarComponent = (props: any) => {
   return (
     <div className="navbarcomponent">
       <Navbar color="" light expand="md" style={{ backgroundColor: "#f26900" }}>
-        <NavbarBrand className="logoIMG" href="/">Resource Management System</NavbarBrand>
+        <NavbarBrand className="logoIMG" href="/">
+          Resource Management System
+        </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
@@ -36,14 +43,12 @@ export const NavBarComponent = (props: any) => {
               <NavLink href="/register">Register</NavLink>
             </NavItem>
 
-  
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle className="dropdown-menu-right" nav caret>
                 {/* {updateCurrentUser} */}
                 Menu
               </DropdownToggle>
               <DropdownMenu right>
-                
                 <DropdownItem header>Batches</DropdownItem>
                 <DropdownItem href="/createbatch">Add Batch</DropdownItem>
                 <DropdownItem href="/batchtable">View Batches</DropdownItem>
@@ -79,11 +84,22 @@ export const NavBarComponent = (props: any) => {
                 <DropdownItem disabled>Logout</DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
-
-            
-
           </Nav>
         </Collapse>
+        <Form inline>
+          <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
+              <Input
+                className="form-control mr-lg-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+          </FormGroup>
+          <Button className="btn btn-secondary my-2 my-sm-0" type="submit">
+            Search
+          </Button>
+        </Form>
+        <img src={HeaderImage} alt="header" style={{height: "auto", width:"125px", padding:"10px" }} />
       </Navbar>
     </div>
   );
