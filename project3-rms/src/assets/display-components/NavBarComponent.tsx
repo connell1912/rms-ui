@@ -28,25 +28,26 @@ export const NavBarComponent = (props: any) => {
     <div className="navbarcomponent">
       <Navbar color="" light expand="md" style={{ backgroundColor: "#f26900" }}>
         <NavbarBrand className="logoIMG" href="/">
-          Resource Management System
+          <img src={HeaderImage} alt="header" style={{height: "auto", width:"150px", padding:"15px" }} />
+          <br/>Resource Management System
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="/">Home</NavLink>
+              <NavLink href="/"><br/>Home</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/login">Login</NavLink>
+              <NavLink href="/login"><br/>Login</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/register">Register</NavLink>
+              <NavLink href="/register"><br/>Register</NavLink>
             </NavItem>
 
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle className="dropdown-menu-right" nav caret>
                 {/* {updateCurrentUser} */}
-                Menu
+                <br/>Menu
               </DropdownToggle>
               <DropdownMenu right>
                 <DropdownItem header>Batches</DropdownItem>
@@ -99,7 +100,7 @@ export const NavBarComponent = (props: any) => {
             Search
           </Button>
         </Form>
-        <img src={HeaderImage} alt="header" style={{height: "auto", width:"125px", padding:"10px" }} />
+        
       </Navbar>
     </div>
   );
