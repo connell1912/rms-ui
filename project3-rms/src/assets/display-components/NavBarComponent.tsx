@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import HeaderImage from "./assets/Revature_on_orange.png";
 import {
   Collapse,
   Navbar,
@@ -34,11 +35,15 @@ export const NavBarComponent = (props: any) => {
             <NavItem>
               <NavLink href="/register">Register</NavLink>
             </NavItem>
+
+  
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle className="dropdown-menu-right" nav caret>
                 {/* {updateCurrentUser} */}
+                Menu
               </DropdownToggle>
               <DropdownMenu right>
+                
                 <DropdownItem header>Batches</DropdownItem>
                 <DropdownItem href="/createbatch">Add Batch</DropdownItem>
                 <DropdownItem href="/batchtable">View Batches</DropdownItem>
@@ -74,6 +79,9 @@ export const NavBarComponent = (props: any) => {
                 <DropdownItem disabled>Logout</DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
+
+            
+
           </Nav>
         </Collapse>
       </Navbar>

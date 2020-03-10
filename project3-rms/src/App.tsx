@@ -23,6 +23,8 @@ import { AmenityTableComponent } from "./campus-service/components/amenity-compo
 import CreateAmenityComponent from "./campus-service/components/amenity-components/CreateAmenityContainer";
 import CreateBuildingComponent from "./campus-service/components/building-components/CreateBuildingContainer";
 import CreateCampusComponent from "./campus-service/components/campus-components/CreateCampusContainer";
+import BGimage from "./assets/image-from-rawpixel-id-516730-jpeg.jpg";
+
 
 function App() {
   return (
@@ -31,9 +33,9 @@ function App() {
         <Provider store={store}>
           <Router history={history}>
             <div className="header">
-              <h1>
+              {/* <h1>
                 <img id="headerImage" src={HeaderImage} alt="Logo" />
-              </h1>
+              </h1> */}
               <NavBarComponent />
             </div>
             <Switch>
@@ -58,6 +60,9 @@ function App() {
         </Provider>
 
         {/* <footer className="footer"></footer> */}
+
+        <img id="beazer" src={BGimage} alt="NO BACKGROUND" height="42" width="42"/>
+
       </div>
     </>
   );
