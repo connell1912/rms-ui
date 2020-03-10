@@ -40,7 +40,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "sonar-scanner": "node_modules/sonar-scanner/bin/sonar-scanner",
+    "start": "webpack",
+    "test": "jest --coverage --coverageDirectory=output/coverage/jest"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -58,8 +61,38 @@
     ]
   },
   "devDependencies": {
+    "@types/enzyme-adapter-react-16": "^1.0.6",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
-    "raf": "^3.4.1"
-  }
+    "eslint": "^4.19.1",
+    "eslint-plugin-react": "^7.18.3",
+    "jest-junit": "^3.7.0",
+    "jest-sonar-reporter": "^2.0.0",
+    "raf": "^3.4.1",
+    "sonar-scanner": "^3.1.0"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!**/node_modules/**",
+      "!build/**"
+    ],
+    "coverageReporters": [
+      "lcov",
+      "text"
+    ],
+    "reporters": [
+      "default",
+      "jest-junit"
+    ]
+  },
+  "jest-junit": {
+    "output": "output/coverage/junit/junit.xml",
+    "usePathForSuiteName": "true"
+  }  
+  
+    
+  
+
+
 }
