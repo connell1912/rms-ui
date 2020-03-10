@@ -46,10 +46,8 @@ export const NavBarComponent = (props: any) => {
             <NavItem>
               <NavLink href="/register">Register</NavLink>
             </NavItem>
-
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle className="dropdown-menu-right" nav caret>
-                {/* {updateCurrentUser} */}
                 Add Resources
               </DropdownToggle>
               <DropdownMenu right>
@@ -64,7 +62,6 @@ export const NavBarComponent = (props: any) => {
             </UncontrolledDropdown>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle className="dropdown-menu-right" nav caret>
-                {/* {updateCurrentUser} */}
                 View Resources
               </DropdownToggle>
               <DropdownMenu right>
