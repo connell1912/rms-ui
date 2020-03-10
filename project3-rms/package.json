@@ -43,9 +43,6 @@
     "eject": "react-scripts eject",
     "sonar-scanner": "node_modules/sonar-scanner/bin/sonar-scanner"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
   "browserslist": {
     "production": [
       ">0.2%",

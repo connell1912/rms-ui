@@ -5,7 +5,7 @@ import { updateCurrentUser } from "../../action-mappers/login-action";
 
 const mapStateToProps = (state: IState) => {
   return {
-    /* currentUser: state.userState.currentUser, */
+    currentUser: state.userState.currentUser, 
     loginMessage: state.userState.loginMessage
   };
 };

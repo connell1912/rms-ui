@@ -11,7 +11,7 @@ import IUser from "../employee-service/model/IUser";
 
 export const apiLogin = async (email: string, password: string) => {
   try {
-    const response = await axiosConfig.post("employee/auth", {
+    const response = await axiosConfig.post("employee-service/employee/auth", {
       email,
       password
     });
