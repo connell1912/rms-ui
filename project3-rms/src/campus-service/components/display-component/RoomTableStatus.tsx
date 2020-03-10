@@ -10,7 +10,7 @@ export class RoomStatusTable extends React.PureComponent<IStatusProps> {
   render() {
     return (
       <>
-        <Table>
+        <Table striped>
           <th>
             <tr>
               <td>Whiteboard cleaned?</td>
