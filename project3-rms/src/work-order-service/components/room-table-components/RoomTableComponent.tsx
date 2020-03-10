@@ -3,7 +3,6 @@ import { getRooms } from "../../../utility/api";
 import { Table } from "reactstrap";
 import { IRoom } from "../../model/IRoom";
 import { RoomTableDisplay } from "./RoomTableDisplay";
-import { Link } from "react-router-dom";
 
 export const RoomTableComponent: React.FC<any> = (props: any) => {
   const [roomList, setRoomList] = useState([]);
@@ -12,7 +11,7 @@ export const RoomTableComponent: React.FC<any> = (props: any) => {
   }, [roomList.length]);
 
   return (
-    <div className="general">
+    <div className="table">
       <Table striped>
         <thead>
           <tr>
@@ -29,8 +28,6 @@ export const RoomTableComponent: React.FC<any> = (props: any) => {
           ))}
         </tbody>
       </Table>
-
-      <Link to="/">Landing</Link>
     </div>
   );
 };

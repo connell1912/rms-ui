@@ -1,5 +1,5 @@
 import React from "react";
-import HeaderImage from "./assets/Revature_on_orange.png";
+// import HeaderImage from "./assets/Revature_on_orange.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./assets/main.css";
 import { Provider } from "react-redux";

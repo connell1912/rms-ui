@@ -1,4 +1,4 @@
-import react, { Component } from "react";
+import { Component } from "react";
 
 export class TableMap extends Component {
   constructor(props: any) {

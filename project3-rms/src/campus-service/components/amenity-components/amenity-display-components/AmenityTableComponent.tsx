@@ -11,8 +11,8 @@ export const AmenityTableComponent: React.FC<any> = (props: any) => {
   }, [amenityList.length]);
 
   return (
-    <div className="registerDiv">
-      <Table bordered>
+    <div className="table">
+      <Table striped>
         <thead>
           <tr>
             <th>ID</th>
