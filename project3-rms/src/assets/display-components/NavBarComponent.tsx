@@ -50,7 +50,7 @@ export const NavBarComponent = (props: any) => {
             : <></>}
             <NavItem>
               { isLoggedIn ? 
-              <NavLink href="/" onClick={logout}>Logout</NavLink> 
+              <></> 
               :
               <NavLink href="/login">Login</NavLink> }
             </NavItem>
@@ -98,6 +98,10 @@ export const NavBarComponent = (props: any) => {
                  
             </UncontrolledDropdown>
               : <> </>}
+              { isLoggedIn ? 
+              <NavItem>
+                <NavLink href="/" onClick={logout}>Logout</NavLink> 
+              </NavItem> : <></>}
           </Nav>
         </Collapse>
         <Form inline>
