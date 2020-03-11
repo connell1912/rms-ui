@@ -12,7 +12,7 @@ export const RoomTableDisplay: React.FC<IRR> = (props: IRR) => {
         <td key={props.room.id}>{props.room.id}</td>
         {/* <td key={props.room.currentStatus}>{props.room.currentStatus}</td> */}
         <td key={props.room.roomNumber}>{props.room.roomNumber}</td>
-        <td>{props.room.isActive}</td>
+        <td>{props.room.isActive ? "true":"false"}</td>
         <td key={props.room.maxOccupancy}>{props.room.maxOccupancy}</td>
       </tr>
     </>
