@@ -35,6 +35,7 @@ function App() {
               <NavBarComponent />
             </div>
             <Switch>
+              <Route path="/landing" component={LandingPage} />
               <Route path="/register" component={RegisterComponent} />
               <Route path="/home" component={LandingPage} />
               <Route path="/createbatch" component={CreateComponent} />

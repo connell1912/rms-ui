@@ -64,10 +64,10 @@
 
 body {
   font-family: "Muli";
-  background-color: lightgrey;
-  background-image: url("./image-from-rawpixel-id-516730-jpeg.jpg");
-  background-size: 100%;
-  background-repeat: no-repeat;
+/*   background-color: lightgrey; */
+/* background-image: url("./image-from-rawpixel-id-516730-jpeg.jpg"); */
+/*   background-size: 100%;
+  background-repeat: no-repeat; */
 }
 
 /* .header {
