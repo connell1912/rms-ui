@@ -36,7 +36,7 @@ function App() {
             </div>
             <Switch>
               <Route path="/register" component={RegisterComponent} />
-              <Route path="/login" component={LoginComponent} />
+              <Route path="/home" component={LandingPage} />
               <Route path="/createbatch" component={CreateComponent} />
               <Route path="/batchtable" component={BatchTableComponent} />
               <Route path="/addaddress" component={CreateAddressComponent} />
@@ -51,7 +51,7 @@ function App() {
               <Route path="/campustable" component={CampusComponent} />
               <Route path="/newbuilding" component={CreateBuildingComponent} />
               <Route path="/buildingtable" component={BuildingTableComponent} />
-              <Route path="/" component={LandingPage} />
+              <Route path="/" component={LoginComponent} />
             </Switch>
           </Router>
         </Provider>

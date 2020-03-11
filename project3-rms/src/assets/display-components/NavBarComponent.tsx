@@ -13,7 +13,9 @@ import {
   Form,
   Input,
   Button,
-  FormGroup
+  FormGroup,
+  NavLink,
+  NavItem
 } from "reactstrap";
 import {history} from '../../utility/history';
 
@@ -38,13 +40,14 @@ export const NavBarComponent = (props: any) => {
           />
           Resource Management System
         </NavbarBrand>
-        <NavbarToggler onClick={toggle} />
+        {/* <NavbarToggler onClick={toggle} /> */}
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
-<<<<<<< HEAD
+            {isLoggedIn ? 
             <NavItem>
-              <NavLink href="/">Home</NavLink>
+              <NavLink href="/home">Home</NavLink>
             </NavItem>
+            : <></>}
             <NavItem>
               { isLoggedIn ? 
               <NavLink href="/" onClick={logout}>Logout</NavLink> 
@@ -57,8 +60,6 @@ export const NavBarComponent = (props: any) => {
             </NavItem>
               }
             { isLoggedIn ? 
-=======
->>>>>>> 4fa978c732cf5c591d346af28851cc8511aedccf
             <UncontrolledDropdown nav inNavbar>
               
               <DropdownToggle className="dropdown-menu-right" nav caret>
