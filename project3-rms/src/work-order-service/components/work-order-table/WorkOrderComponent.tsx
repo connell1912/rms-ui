@@ -3,7 +3,6 @@ import { getWOList } from "../../../utility/api";
 import { IWorkOrder } from "../../model/IWorkOrder";
 import { Table } from "reactstrap";
 import { WorkOrderDisplay } from "./WorkOrderDisplay";
-import { Link } from "react-router-dom";
 
 export const WorkOrderComponent: React.FC<any> = (props: any) => {
   const [workOrderList, setWorkOrderList] = useState([]);
@@ -12,11 +11,7 @@ export const WorkOrderComponent: React.FC<any> = (props: any) => {
   }, [workOrderList.length]);
 
   return (
-    <div className="general">
-      {/* <Card>
-                {workOrderList.map((r:IWorkOrder) => <WorkOrderDisplay wo={r}/>)}
-            </Card> */}
-
+    <div className="table">
       <Table striped>
         <thead>
           <tr>
@@ -35,8 +30,6 @@ export const WorkOrderComponent: React.FC<any> = (props: any) => {
           ))}
         </tbody>
       </Table>
-
-      <Link to="/">Landing</Link>
     </div>
   );
 };

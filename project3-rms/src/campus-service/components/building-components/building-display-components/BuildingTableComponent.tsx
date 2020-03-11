@@ -12,7 +12,7 @@ export const BuildingTableComponent: React.FC<any> = (props: any) => {
   }, [buildingList.length]);
 
   return (
-    <div className="general">
+    <div className="table">
       <Table striped>
         <thead>
           <tr>

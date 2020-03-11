@@ -43,13 +43,14 @@
   border-radius: 20px;
 }
 
-.batchTable {
+.table {
   background-color: #f8f9fa;
-  padding: 40px;
-  margin-top: 10%;
-  margin-left: 12.5%;
-  max-width: 75%;
+  padding: 1px;
+  margin-top: 1%;
+  margin-left: 5%;
+  max-width: 90%;
   border-radius: 20px;
+  font-size: 1.6vw;
 }
 
 .createBatchDiv {
@@ -65,11 +66,11 @@ body {
   font-family: "Muli";
   background-color: lightgrey;
   background-image: url("./image-from-rawpixel-id-516730-jpeg.jpg");
-  background-size: auto;
-  background-size: cover;
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
-.header {
+/* .header {
   height: 10%;
   background-color: #f26900;
   width: 100%;
@@ -77,7 +78,7 @@ body {
   top: 0px;
   position: absolute;
   text-align: right;
-}
+} */
 
 #headerImage {
   width: 10%;
@@ -112,4 +113,27 @@ body {
 .dropdown-menu-right {
   right: 0;
   left: auto;
+}
+
+.navbarcomponent {
+  font-size: 1.4vw;
+  font-weight: bold;
+}
+
+#beazer {
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+  height: 10%;
+}
+
+.logoIMG {
+  display: flex;
+  align-items: center;
+
+}
+.logoIMG>img {
+  padding: 7px 14px;
+  height: 10%;
+  width: auto;
 }
