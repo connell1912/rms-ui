@@ -17,12 +17,18 @@ import {
   Button,
   FormGroup
 } from "reactstrap";
+import {history} from '../../utility/history';
 
 export const NavBarComponent = (props: any) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
   const isLoggedIn = localStorage.getItem("state");
+
+  const logout = () =>{
+    localStorage.clear();
+    history.push("/login");
+   }
   return (
     <div className="navbarcomponent">
       <Navbar color="" light expand="md" style={{ backgroundColor: "#f26900" }}>
@@ -42,13 +48,16 @@ export const NavBarComponent = (props: any) => {
             </NavItem>
             <NavItem>
               { isLoggedIn ? 
-              <NavLink href="/" onClick={localStorage.clear}>Logout</NavLink> 
+              <NavLink href="/" onClick={logout}>Logout</NavLink> 
               :
               <NavLink href="/login">Login</NavLink> }
             </NavItem>
+            {isLoggedIn ? <></>:
             <NavItem>
               <NavLink href="/register">Register</NavLink>
             </NavItem>
+              }
+            { isLoggedIn ? 
             <UncontrolledDropdown nav inNavbar>
               
               <DropdownToggle className="dropdown-menu-right" nav caret>
@@ -65,6 +74,8 @@ export const NavBarComponent = (props: any) => {
                 <DropdownItem href="/addworkorder">Add Work Order</DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
+            : <> </>}
+            { isLoggedIn ? 
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle className="dropdown-menu-right" nav caret>
                 View Resources
@@ -84,7 +95,7 @@ export const NavBarComponent = (props: any) => {
               </DropdownMenu>
                  
             </UncontrolledDropdown>
-            // : <> </>}
+              : <> </>}
           </Nav>
         </Collapse>
         <Form inline>
