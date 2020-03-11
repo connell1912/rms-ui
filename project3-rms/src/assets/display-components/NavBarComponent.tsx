@@ -6,8 +6,6 @@ import {
   NavbarToggler,
   NavbarBrand,
   Nav,
-  NavItem,
-  NavLink,
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
@@ -37,15 +35,6 @@ export const NavBarComponent = (props: any) => {
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
-            <NavItem>
-              <NavLink href="/">Home</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="/login">Login</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="/register">Register</NavLink>
-            </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle className="dropdown-menu-right" nav caret>
                 Add Resources

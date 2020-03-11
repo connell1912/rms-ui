@@ -2,7 +2,7 @@ import React, { SyntheticEvent } from "react";
 import ICampus from "../../model/ICampus";
 import { addCampus } from "../../../utility/api";
 import { history } from "../../../utility/history";
-import { Form, FormGroup, Label, Col, Input } from "reactstrap";
+import { Form, FormGroup, Label, Col, Input, Button } from "reactstrap";
 
 interface ICampusState {
   campus: ICampus;
@@ -212,6 +212,9 @@ export class CreateCampusComponent extends React.Component<ICampusState, any> {
                 />
               </Col>
             </FormGroup>
+            <Button color="btn btn-outline-secondary" type="submit">
+              Submit
+            </Button>
           </Form>
         </div>
       </>

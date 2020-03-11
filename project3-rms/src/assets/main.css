@@ -10,7 +10,7 @@
 .registerDiv {
   background-color: #f8f9fa;
   padding: 40px;
-  margin-top: 10%;
+  margin-top: 5%;
   margin-left: 12.5%;
   max-width: 75%;
   border-radius: 20px;
@@ -19,7 +19,7 @@
 .submitRoom {
   background-color: #f8f9fa;
   padding: 40px;
-  margin-top: 10%;
+  margin-top: 5%;
   margin-left: 12.5%;
   max-width: 75%;
   border-radius: 20px;
@@ -28,7 +28,7 @@
 .general {
   background-color: #f8f9fa;
   padding: 40px;
-  margin-top: 10%;
+  margin-top: 5%;
   margin-left: 12.5%;
   max-width: 75%;
   border-radius: 20px;
@@ -37,7 +37,7 @@
 .loginDiv {
   background-color: #f8f9fa;
   padding: 40px;
-  margin-top: 10%;
+  margin-top: 5%;
   margin-left: 12.5%;
   max-width: 75%;
   border-radius: 20px;
@@ -125,15 +125,4 @@ body {
   bottom: 0px;
   width: 100%;
   height: 10%;
-}
-
-.logoIMG {
-  display: flex;
-  align-items: center;
-
-}
-.logoIMG>img {
-  padding: 7px 14px;
-  height: 10%;
-  width: auto;
 }
