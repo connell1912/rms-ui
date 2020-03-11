@@ -30,7 +30,6 @@ export default interface IUser {
   email: string;
   title?: titlesEnum;
   password: string;
-  employeeId?: number;
-  roles?: rolesEnum;
+  role?: rolesEnum;
   department?: departmentsEnum;
 }
