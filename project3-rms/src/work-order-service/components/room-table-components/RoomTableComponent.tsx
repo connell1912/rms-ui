@@ -16,9 +16,8 @@ export const RoomTableComponent: React.FC<any> = (props: any) => {
         <thead>
           <tr>
             <th>Room ID</th>
-            <th>Current Status</th>
             <th>Room Number</th>
-            <th>Active</th>
+            {/* <th>Active</th> */}
             <th>Max Occupancy</th>
           </tr>
         </thead>
