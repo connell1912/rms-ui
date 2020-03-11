@@ -191,7 +191,6 @@ export class CreateBuildingComponent extends React.Component<
               Submit
             </Button>
           </Form>
-          >
         </div>
       </>
     );

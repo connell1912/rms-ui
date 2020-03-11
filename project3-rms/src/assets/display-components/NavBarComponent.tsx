@@ -6,8 +6,6 @@ import {
   NavbarToggler,
   NavbarBrand,
   Nav,
-  NavItem,
-  NavLink,
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
@@ -43,6 +41,7 @@ export const NavBarComponent = (props: any) => {
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
+<<<<<<< HEAD
             <NavItem>
               <NavLink href="/">Home</NavLink>
             </NavItem>
@@ -58,6 +57,8 @@ export const NavBarComponent = (props: any) => {
             </NavItem>
               }
             { isLoggedIn ? 
+=======
+>>>>>>> 4fa978c732cf5c591d346af28851cc8511aedccf
             <UncontrolledDropdown nav inNavbar>
               
               <DropdownToggle className="dropdown-menu-right" nav caret>
