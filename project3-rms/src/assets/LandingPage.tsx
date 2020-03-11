@@ -15,7 +15,7 @@ export class LandingPage extends Component {
   render() {
     return (
       <div style={{ margin: "60px" }}>
-        <h1>Select a Service</h1>
+        <h1>Select a</h1>
         <br />
         <Row>
           <Col sm="3">
@@ -24,11 +24,10 @@ export class LandingPage extends Component {
                 <CardTitle>Batches</CardTitle>
                 <Button
                   style={{ margin: "3px", alignContent: "center" }}
-                  href="/createbatch"
-                >
-                  Add Batch
+                  href="/createbatch">
+                  Add
                 </Button>
-                <Button href="/batchtable">View Batches</Button>
+                <Button href="/batchtable">View</Button>
               </CardBody>
             </Card>
           </Col>
@@ -39,11 +38,10 @@ export class LandingPage extends Component {
                 <CardTitle>Addresses</CardTitle>
                 <Button
                   style={{ margin: "3px", alignContent: "center" }}
-                  href="/addaddress"
-                >
-                  Add Addresses
+                  href="/addaddress">
+                  Add
                 </Button>
-                <Button href="/addresses">View Addresses</Button>
+                <Button href="/addresses">View</Button>
               </CardBody>
             </Card>
           </Col>
@@ -54,11 +52,10 @@ export class LandingPage extends Component {
                 <CardTitle>Amenities</CardTitle>
                 <Button
                   style={{ margin: "3px", alignContent: "center" }}
-                  href="/newamenity"
-                >
-                  Add Amenity
+                  href="/newamenity">
+                  Add
                 </Button>
-                <Button href="/amenities">View Amenities</Button>
+                <Button href="/amenities">View</Button>
               </CardBody>
             </Card>
           </Col>
@@ -68,9 +65,9 @@ export class LandingPage extends Component {
               <CardBody>
                 <CardTitle>Rooms</CardTitle>
                 <Button style={{ margin: "3px", alignContent: "center" }}>
-                  Add Room
+                  Add
                 </Button>
-                <Button>View Rooms</Button>
+                <Button>View</Button>
               </CardBody>
             </Card>
           </Col>
@@ -82,9 +79,9 @@ export class LandingPage extends Component {
               <CardBody>
                 <CardTitle>Work Orders</CardTitle>
                 <Button style={{ margin: "3px", alignContent: "center" }} href="/addworkorder">
-                  Add Work Orders
+                  Add
                 </Button>
-                <Button href="/workordertable">View Work Orders</Button>
+                <Button href="/workordertable">View</Button>
               </CardBody>
             </Card>
           </Col>
@@ -94,9 +91,9 @@ export class LandingPage extends Component {
               <CardBody>
                 <CardTitle>Campuses</CardTitle>
                 <Button style={{ margin: "3px", alignContent: "center" }}>
-                  Add Campus
+                  Add
                 </Button>
-                <Button>View Campuses</Button>
+                <Button>View</Button>
               </CardBody>
             </Card>
           </Col>
@@ -106,9 +103,9 @@ export class LandingPage extends Component {
               <CardBody>
                 <CardTitle>Buildings</CardTitle>
                 <Button style={{ margin: "3px", alignContent: "center" }}>
-                  Add Building
+                  Add
                 </Button>
-                <Button>View Buildings</Button>
+                <Button>View</Button>
               </CardBody>
             </Card>
           </Col>
