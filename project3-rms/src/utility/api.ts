@@ -1,4 +1,4 @@
-import { axiosConfig } from "./axiosConfig";
+import { axiosConfig, axiosEmployee } from "./axiosConfig";
 import IBatch from "../batch-service/model/IBatch";
 import axios from "axios";
 import { IWorkOrder } from "../work-order-service/model/IWorkOrder";
@@ -11,7 +11,7 @@ import IUser from "../employee-service/model/IUser";
 
 export const apiLogin = async (email: string, password: string) => {
   try {
-    const response = await axiosConfig.post("employee/auth", {
+    const response = await axiosEmployee.post("employee/login", {
       email,
       password
     });
@@ -58,7 +58,7 @@ export const apiRegister = async (
     department
   };
   try {
-    const response = await axios.post("employee/save", {
+    const response = await axiosEmployee.post("employee/save", {
       password: password,
       firstName: firstName,
       lastName: lastName,
@@ -128,7 +128,7 @@ export const apiRegister = async (
 };
 
 export const addUser = (body: IUser) => {
-  return axiosConfig.post("employee-service/register", body);
+  return axiosEmployee.post("employee/save", body);
 }
 
 /* Batch APIs */
