@@ -26,7 +26,7 @@ export const NavBarComponent = (props: any) => {
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
-            <NavItem>
+           {/*  <NavItem>
               <NavLink href="/">Home</NavLink>
             </NavItem>
             <NavItem>
@@ -34,6 +34,9 @@ export const NavBarComponent = (props: any) => {
             </NavItem>
             <NavItem>
               <NavLink href="/register">Register</NavLink>
+            </NavItem> */}
+            <NavItem>
+              <NavLink href="/landing">Services</NavLink>
             </NavItem>
 
   
@@ -80,7 +83,7 @@ export const NavBarComponent = (props: any) => {
               </DropdownMenu>
             </UncontrolledDropdown>
 
-            
+
 
           </Nav>
         </Collapse>

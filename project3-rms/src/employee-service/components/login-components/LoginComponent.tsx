@@ -1,6 +1,9 @@
 import React, { SyntheticEvent } from "react";
 import { Form, Input, Button, FormGroup, Label, Col } from "reactstrap";
 import { updateCurrentUser } from "../../action-mappers/login-action";
+import { Link } from "react-router-dom";
+
+
 
 interface ILoginState {
   email: string;
@@ -75,6 +78,8 @@ export class LoginComponent extends React.Component<ILoginProps, ILoginState> {
           </FormGroup>
           <Button id="login">Login</Button>
         </Form>
+
+        <Link to="/register" style={{fontSize:"15px"}}>Register A New Account</Link>
         <br />
         <p>{this.props.loginMessage}</p>
       </div>

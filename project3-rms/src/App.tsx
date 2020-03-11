@@ -24,7 +24,7 @@ import CreateAmenityComponent from "./campus-service/components/amenity-componen
 import CreateBuildingComponent from "./campus-service/components/building-components/CreateBuildingContainer";
 import CreateCampusComponent from "./campus-service/components/campus-components/CreateCampusContainer";
 import BGimage from "./assets/image-from-rawpixel-id-516730-jpeg.jpg";
-
+import {LandingPage} from "./assets/LandingPage";
 
 function App() {
   return (
@@ -39,6 +39,7 @@ function App() {
               <NavBarComponent />
             </div>
             <Switch>
+              <Route path="/landing" component={LandingPage} />
               <Route path="/register" component={RegisterComponent} />
               <Route path="/createbatch" component={CreateComponent} />
               <Route path="/batchtable" component={BatchTableComponent} />
@@ -61,8 +62,13 @@ function App() {
 
         {/* <footer className="footer"></footer> */}
 
-        <img id="beazer" src={BGimage} alt="NO BACKGROUND" height="42" width="42"/>
-
+        <img
+          id="beazer"
+          src={BGimage}
+          alt="NO BACKGROUND"
+          height="42"
+          width="42"
+        />
       </div>
     </>
   );
