@@ -10,14 +10,14 @@ import {
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
-  DropdownItem
+  DropdownItem,
 } from "reactstrap";
 
 export const NavBarComponent = (props: any) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
-
+  const isLoggedIn = localStorage.getItem("state");
   return (
     <div className="navbarcomponent">
       <Navbar color="" light expand="md" style={{ backgroundColor: "#f26900" }}>
@@ -29,17 +29,22 @@ export const NavBarComponent = (props: any) => {
               <NavLink href="/">Home</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/login">Login</NavLink>
+              { isLoggedIn ? 
+              <NavLink href="/" onClick={localStorage.clear}>Logout</NavLink> 
+              :
+              <NavLink href="/login">Login</NavLink> }
             </NavItem>
             <NavItem>
               <NavLink href="/register">Register</NavLink>
             </NavItem>
-  
+            {/* {isLoggedIn ? */}
             <UncontrolledDropdown nav inNavbar>
+              
               <DropdownToggle className="dropdown-menu-right" nav caret>
                 {/* {updateCurrentUser} */}
                 Menu
               </DropdownToggle>
+             
               <DropdownMenu right>
                 
                 <DropdownItem header>Batches</DropdownItem>
@@ -76,7 +81,9 @@ export const NavBarComponent = (props: any) => {
                 <DropdownItem divider />
                 <DropdownItem disabled>Logout</DropdownItem>
               </DropdownMenu>
+                 
             </UncontrolledDropdown>
+            // : <> </>}
           </Nav>
         </Collapse>
       </Navbar>
