@@ -37,7 +37,7 @@ export class LoginComponent extends React.Component<ILoginProps, ILoginState> {
 
   submitLogin = async (event: SyntheticEvent) => {
     event.preventDefault();
-    updateCurrentUser(this.state.email, this.state.password);
+    this.props.updateCurrentUser(this.state.email, this.state.password);
   };
 
   render() {

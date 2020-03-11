@@ -8,10 +8,11 @@ import { IAmenity } from "../campus-service/model/IAmenity";
 import IBuilding from "../campus-service/model/IBuilding";
 import ICampus from "../campus-service/model/ICampus";
 import IUser from "../employee-service/model/IUser";
+import { IStatus } from "../campus-service/model/IStatus";
 
 export const apiLogin = async (email: string, password: string) => {
   try {
-    const response = await axiosEmployee.post("employee/login", {
+    const response = await axiosConfig.post("employee-service/employee/login", {
       email,
       password
     });
@@ -58,7 +59,7 @@ export const apiRegister = async (
     department
   };
   try {
-    const response = await axiosEmployee.post("employee/save", {
+    const response = await axios.post("employee-service/employee/save", {
       password: password,
       firstName: firstName,
       lastName: lastName,
@@ -128,7 +129,7 @@ export const apiRegister = async (
 };
 
 export const addUser = (body: IUser) => {
-  return axiosEmployee.post("employee/save", body);
+  return axiosConfig.post("employee-service/employee/save", body);
 }
 
 /* Batch APIs */
@@ -152,7 +153,7 @@ export const getWOList = () => {
 };
 
 export const publishWorkOrder = (body: IWorkOrder) => {
-  return axiosConfig.post("work-order-service/workorder/newworkorder", body);
+  return axiosConfig.post("work-order-service/workorder/new", body);
 };
 
 /* Room APIs */
@@ -203,4 +204,14 @@ export const getCampuses = () => {
 
 export const addCampus = (body: ICampus) => {
   return axiosConfig.post("campus-service/campus/new", body);
+};
+
+/* Room Status APIs */
+
+export const getRoomStatuses = () => {
+  return axiosConfig.get("campus-service/roomstatus/all");
+};
+
+export const addRoomStatus = (body: IStatus) => {
+  return axiosConfig.post("campus-service/roomstatus/new", body);
 };
