@@ -20,7 +20,7 @@ interface TableState {
   data: Row[];
 }
 
-export default function MaterialTableDemo() {
+export default function TableComponent() {
   const [state, setState] = React.useState<TableState>({
     columns: [
       { title: "Batch ID", field: "batchId", type: "numeric" },

@@ -1,5 +1,5 @@
 import React from "react";
-import HeaderImage from "./assets/Revature_on_orange.png";
+// import HeaderImage from "./assets/Revature_on_orange.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./assets/main.css";
 import { Provider } from "react-redux";
@@ -23,8 +23,7 @@ import { AmenityTableComponent } from "./campus-service/components/amenity-compo
 import CreateAmenityComponent from "./campus-service/components/amenity-components/CreateAmenityContainer";
 import CreateBuildingComponent from "./campus-service/components/building-components/CreateBuildingContainer";
 import CreateCampusComponent from "./campus-service/components/campus-components/CreateCampusContainer";
-import BGimage from "./assets/image-from-rawpixel-id-516730-jpeg.jpg";
-import {LandingPage} from "./assets/LandingPage";
+import { LandingPage } from "./assets/display-components/LandingPage";
 
 function App() {
   return (
@@ -33,14 +32,12 @@ function App() {
         <Provider store={store}>
           <Router history={history}>
             <div className="header">
-              {/* <h1>
-                <img id="headerImage" src={HeaderImage} alt="Logo" />
-              </h1> */}
               <NavBarComponent />
             </div>
             <Switch>
               <Route path="/landing" component={LandingPage} />
               <Route path="/register" component={RegisterComponent} />
+              <Route path="/login" component={LoginComponent} />
               <Route path="/createbatch" component={CreateComponent} />
               <Route path="/batchtable" component={BatchTableComponent} />
               <Route path="/addaddress" component={CreateAddressComponent} />
@@ -55,20 +52,17 @@ function App() {
               <Route path="/campustable" component={CampusComponent} />
               <Route path="/newbuilding" component={CreateBuildingComponent} />
               <Route path="/buildingtable" component={BuildingTableComponent} />
-              <Route path="/" component={LoginComponent} />
+              <Route path="/" component={LandingPage} />
             </Switch>
           </Router>
         </Provider>
-
-        {/* <footer className="footer"></footer> */}
-
-        <img
+        {/* <img
           id="beazer"
           src={BGimage}
           alt="NO BACKGROUND"
           height="42"
           width="42"
-        />
+        /> */}
       </div>
     </>
   );

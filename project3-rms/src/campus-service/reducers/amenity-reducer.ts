@@ -1,5 +1,5 @@
 import { createAmenityTypes } from "../action-mappers/create-amenity-action";
-import { IAmenityState, state } from "../../utility";
+import { IAmenityState } from "../../utility";
 
 const initialState: IAmenityState = {
   addAmenity: null,
