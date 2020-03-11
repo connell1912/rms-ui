@@ -1,3 +1,4 @@
+
 export default interface IBuilding {
   id?: number;
   name: string;

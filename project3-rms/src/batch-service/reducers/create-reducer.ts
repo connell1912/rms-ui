@@ -21,7 +21,6 @@ export const createReducer = (state = initialState, action: any) => {
         createMessage: action.payload.createMessage
       };
     }
-
     default:
       return state;
   }

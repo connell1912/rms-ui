@@ -19,7 +19,7 @@ export const updateCurrentUser = (email: string, password: string) => async (
         currentUser: response.body
       }
     });
-    history.push("/addroom");
+    history.push("/home");
   } else {
     dispatch({
       type: loginTypes.UNSUCCESSFUL_LOGIN,
