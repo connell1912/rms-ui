@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component } from "react";
 import { Card, CardBody, CardTitle, Button, Col, Row, CardImg} from "reactstrap";
 import HeaderImage1 from '../pngsp3/address.png';
 import HeaderImage2 from '../pngsp3/class.png';
