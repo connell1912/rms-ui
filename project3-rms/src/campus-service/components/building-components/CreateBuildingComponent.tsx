@@ -165,7 +165,7 @@ export class CreateBuildingComponent extends React.Component<
                   type="text"
                   name="amenities"
                   id="amenities"
-                  placeholder="Address"
+                  placeholder="Amenities"
                   value={this.state.amenities}
                   onChange={this.updateAmenities}
                 />

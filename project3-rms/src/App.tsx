@@ -17,7 +17,7 @@ import { RoomTableComponent } from "./work-order-service/components/room-table-c
 import { AddressTableComponent } from "./campus-service/components/address-components/address-display-components/AddressTableComponent";
 import SubmitRoom from "./work-order-service/components/add-room-component/SubmitRoom";
 import CreateAddressComponent from "./campus-service/components/address-components/CreateAddressContainer";
-import CampusComponent from "./campus-service/components/campus-components/CreateCampusContainer";
+import {CampusTableComponent} from "./campus-service/components/campus-components/campus-display-components/CampusTableComponent";
 import { BuildingTableComponent } from "./campus-service/components/building-components/building-display-components/BuildingTableComponent";
 import { AmenityTableComponent } from "./campus-service/components/amenity-components/amenity-display-components/AmenityTableComponent";
 import CreateAmenityComponent from "./campus-service/components/amenity-components/CreateAmenityContainer";
@@ -35,6 +35,7 @@ function App() {
               <NavBarComponent />
             </div>
             <Switch>
+              <Route path="/landing" component={LandingPage} />
               <Route path="/register" component={RegisterComponent} />
               <Route path="/home" component={LandingPage} />
               <Route path="/createbatch" component={CreateComponent} />
@@ -48,7 +49,7 @@ function App() {
               <Route path="/newamenity" component={CreateAmenityComponent} />
               <Route path="/amenities" component={AmenityTableComponent} />
               <Route path="/addcampus" component={CreateCampusComponent} />
-              <Route path="/campustable" component={CampusComponent} />
+              <Route path="/campustable" component={CampusTableComponent} />
               <Route path="/newbuilding" component={CreateBuildingComponent} />
               <Route path="/buildingtable" component={BuildingTableComponent} />
               <Route path="/" component={LoginComponent} />
