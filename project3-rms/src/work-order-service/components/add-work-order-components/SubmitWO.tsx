@@ -9,7 +9,7 @@ interface INewWOState {
   contactEmail: string;
 }
 
-export class SubmitWO extends React.Component<any, INewWOState> {
+export class SubmitWO extends React.Component<INewWOState, any> {
   constructor(props: any) {
     super(props);
     this.state = {

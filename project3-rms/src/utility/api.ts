@@ -1,4 +1,4 @@
-import { axiosConfig, axiosEmployee } from "./axiosConfig";
+import { axiosConfig } from "./axiosConfig";
 import IBatch from "../batch-service/model/IBatch";
 import axios from "axios";
 import { IWorkOrder } from "../work-order-service/model/IWorkOrder";

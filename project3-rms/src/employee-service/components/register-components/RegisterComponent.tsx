@@ -21,16 +21,16 @@ export const RegisterComponent: React.FC<any> = (props: IRegisterProps) => {
         <h2>Create an Account</h2>
         <Form
           className="loginForm"
-          onSubmit={(e) =>
-            {e.preventDefault();
+          onSubmit={() =>
             addUser({
               userId: 0,
               firstName: firstName,
               lastName: lastName,
               email: email,
               password: password,
-              role: roles
-            }).then(r => console.log(r.data))}
+              employeeId: 0,
+              roles: roles
+            }).then(r => console.log(r.data))
           }
         >
           <FormGroup row>
@@ -106,7 +106,7 @@ export const RegisterComponent: React.FC<any> = (props: IRegisterProps) => {
                 id="exampleSelect"
                 onChange={val => setRoles(val.target.valueAsNumber)}
               >
-                <option defaultValue={0} disabled={false}>
+                <option selected disabled>
                   Select a Role
                 </option>
                 <option value={0}>Training Manager</option>

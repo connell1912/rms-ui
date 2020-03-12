@@ -10,14 +10,14 @@ interface INewRoomState {
   batchId: number;
 }
 
-export class SubmitRoom extends React.Component<any, INewRoomState> {
+export class SubmitRoom extends React.Component<INewRoomState, any> {
   constructor(props: any) {
     super(props);
     this.state = {
       roomNumber: "",
-      maxOccupancy: 0,
-      isActive: false,
-      batchId: 0
+      maxOccupancy: "",
+      isActive: "",
+      batchId: ""
     };
   }
 
@@ -102,7 +102,7 @@ export class SubmitRoom extends React.Component<any, INewRoomState> {
               <Input
                 required
                 type="select"
-                value={this.state.isActive.valueOf.toString()}
+                value={this.state.isActive}
                 onChange={this.updateIsActive}
               >
                 <option>Active Status: </option>

@@ -13,22 +13,14 @@ import {
   Form,
   Input,
   Button,
-  FormGroup,
-  NavLink,
-  NavItem
+  FormGroup
 } from "reactstrap";
-import {history} from '../../utility/history';
 
 export const NavBarComponent = (props: any) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
-  const isLoggedIn = localStorage.getItem("state");
 
-  const logout = () =>{
-    localStorage.clear();
-    history.push("/login");
-   }
   return (
     <div className="navbarcomponent">
       <Navbar color="" light expand="md" style={{ backgroundColor: "#f26900" }}>
@@ -40,32 +32,13 @@ export const NavBarComponent = (props: any) => {
           />
           Resource Management System
         </NavbarBrand>
-        {/* <NavbarToggler onClick={toggle} /> */}
+        <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
-            {isLoggedIn ? 
-            <NavItem>
-              <NavLink href="/home">Home</NavLink>
-            </NavItem>
-            : <></>}
-            <NavItem>
-              { isLoggedIn ? 
-              <></> 
-              :
-              <NavLink href="/login">Login</NavLink> }
-            </NavItem>
-            {isLoggedIn ? <></>:
-            <NavItem>
-              <NavLink href="/register">Register</NavLink>
-            </NavItem>
-              }
-            { isLoggedIn ? 
             <UncontrolledDropdown nav inNavbar>
-              
               <DropdownToggle className="dropdown-menu-right" nav caret>
                 Add Resources
               </DropdownToggle>
-             
               <DropdownMenu right>
                 <DropdownItem href="/addaddress">Add Address</DropdownItem>
                 <DropdownItem href="/newamenity">Add Amenity</DropdownItem>
@@ -76,8 +49,6 @@ export const NavBarComponent = (props: any) => {
                 <DropdownItem href="/addworkorder">Add Work Order</DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
-            : <> </>}
-            { isLoggedIn ? 
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle className="dropdown-menu-right" nav caret>
                 View Resources
@@ -95,13 +66,7 @@ export const NavBarComponent = (props: any) => {
                   View Work Orders
                 </DropdownItem>
               </DropdownMenu>
-                 
             </UncontrolledDropdown>
-              : <> </>}
-              { isLoggedIn ? 
-              <NavItem>
-                <NavLink href="/" onClick={logout}>Logout</NavLink> 
-              </NavItem> : <></>}
           </Nav>
         </Collapse>
         <Form inline>
