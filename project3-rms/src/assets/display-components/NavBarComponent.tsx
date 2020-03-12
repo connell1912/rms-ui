@@ -3,7 +3,6 @@ import HeaderImage from "../../assets/Revature_on_orange.png";
 import {
   Collapse,
   Navbar,
-  NavbarToggler,
   NavbarBrand,
   Nav,
   UncontrolledDropdown,
@@ -22,7 +21,6 @@ import {history} from '../../utility/history';
 export const NavBarComponent = (props: any) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggle = () => setIsOpen(!isOpen);
   const isLoggedIn = localStorage.getItem("state");
 
   const logout = () =>{

@@ -1,11 +1,8 @@
-import React, { useState, Component } from "react";
+import React, { Component } from "react";
 import {
   Card,
-  CardImg,
   CardBody,
   CardTitle,
-  CardSubtitle,
-  CardText,
   Button,
   Col,
   Row

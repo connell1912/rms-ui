@@ -1,6 +1,5 @@
 import React, { SyntheticEvent } from "react";
 import { Form, Input, Button, FormGroup, Label, Col } from "reactstrap";
-import { updateCurrentUser } from "../../action-mappers/login-action";
 import { Link } from "react-router-dom";
 
 
