@@ -19,7 +19,7 @@ import {
 import {history} from '../../utility/history';
 
 export const NavBarComponent = (props: any) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen] = useState(false);
 
   const isLoggedIn = localStorage.getItem("state");
 
