@@ -1,4 +1,4 @@
-import React, { SyntheticEvent, useState } from "react";
+import React, { useState } from "react";
 import {
   Form,
   FormGroup,
@@ -23,7 +23,7 @@ export const CreateCampusComponent: React.FC<any> = (props: ICampusProps) => {
   const [stagingManagerId, setStagingManagerId] = useState(0);
   const [hrLead, setHrLead] = useState(0);
   const [buildings, setBuildings] = useState("");
-  const [corporateEmployees, setCoporateEmployess] = useState([]);
+  const [corporateEmployees] = useState([]);
 
   return (
     <>

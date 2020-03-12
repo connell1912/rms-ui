@@ -55,7 +55,7 @@ export class SubmitRoom extends React.Component<any, INewRoomState> {
       id: 0,
       roomNumber: this.state.roomNumber,
       maxOccupancy: this.state.maxOccupancy,
-      isActive: this.state.isActive,
+      isActive: true,
       batchId: this.state.batchId
     });
     history.push("/roomtable");
@@ -94,7 +94,7 @@ export class SubmitRoom extends React.Component<any, INewRoomState> {
               />
             </Col>
           </FormGroup>
-          <FormGroup row>
+          {/* <FormGroup row>
             <Label for="status" sm={2}>
               Status
             </Label>
@@ -106,11 +106,11 @@ export class SubmitRoom extends React.Component<any, INewRoomState> {
                 onChange={this.updateIsActive}
               >
                 <option>Active Status: </option>
-                <option value="true">True</option>
-                <option value="false">False</option>
+                <option value="true">Active</option>
+                <option value="false">Inactive</option>
               </Input>
             </Col>
-          </FormGroup>
+          </FormGroup> */}
           <FormGroup row>
             <Label for="batchId" sm={2}>
               Batch Id
